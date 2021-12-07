@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import Loading from "../../components/loading";
 import Banner from "../../components/banner";
 import MenuCategory from "../../components/menu-category";
+import Footer from "../../components/footer";
 
 const HomeContainer = (props) => {
 //   const postData = useSelector((state) => state.postData);
@@ -24,6 +25,7 @@ const HomeContainer = (props) => {
           <Banner></Banner>
           <h3 className="sub-heading"> Categories </h3>
           <MenuCategory></MenuCategory>
+          <Footer></Footer>
         </div>
       )}
     </div>
