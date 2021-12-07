@@ -1,12 +1,12 @@
 import React from 'react';
 
-const MenuCategory = () => {
-    const menuitems = ['pizza', 'north', 'south', 'panjabi', 'breakfast', 'bevarage']; 
+const MenuCategory = (props) => {
+    const menuitems = props.categories;
     return (
         <div className="category__section">
             <div className="category__cont">
                 <div className="category__items">
-                    { menuitems.map(item => (
+                    { menuitems.length > 0 && menuitems.map(item => (
                         <div className="category__item"> { item } </div>
                     ))}
                 </div>

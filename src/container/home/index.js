@@ -1,21 +1,22 @@
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-// import { retrievePosts } from "../../action/post.action";
-// import PostTable from "../../components/post-table";
+import React , { useEffect  } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import Loading from "../../components/loading";
 import Banner from "../../components/banner";
 import MenuCategory from "../../components/menu-category";
 import Footer from "../../components/footer";
+import { retrieveCategories } from "../../action/category.action";
 
 const HomeContainer = (props) => {
-//   const postData = useSelector((state) => state.postData);
+  const { 
+    categoryitems = [],
+    isLoading = false } = useSelector(state => state.categories);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    
-  }, [dispatch, props]);
+  useEffect(()=>{
+    dispatch(retrieveCategories(props));
+  },[dispatch, props]);
 
-  const isLoading = false;
+  
   return (
     <div className="foodorder-app">
       {isLoading ? (
@@ -24,7 +25,7 @@ const HomeContainer = (props) => {
         <div className="foodorder-container">
           <Banner></Banner>
           <h3 className="sub-heading"> Categories </h3>
-          <MenuCategory></MenuCategory>
+          <MenuCategory categories={categoryitems}></MenuCategory>
           <Footer></Footer>
         </div>
       )}
