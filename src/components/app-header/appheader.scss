@@ -1,0 +1,42 @@
+.app-header{
+    color: $header-font;
+    .appHeader{
+        &__cont{
+            height: 60px;
+            background-color: $header-bg;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            a{
+                text-decoration: none;
+                color: $header-font;
+            }
+        }
+        &__logoCont{
+            padding-left:20px
+        }
+        &__logo_main{
+                font-size: 30px;
+                color: $header-font;
+                text-decoration: underline;
+                font-style: italic;
+        }
+        &__logo_sub{
+            font-size: 16px;
+            color: $header-font;
+        }
+
+        &__profileCont{
+            display: flex;
+        } 
+        &__help{
+            flex: 1;
+            padding: 0 20px;
+            a{
+                text-decoration: none;
+                color: $header-font;
+            }
+        }        
+    }
+}

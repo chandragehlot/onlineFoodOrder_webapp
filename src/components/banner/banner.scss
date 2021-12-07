@@ -1,0 +1,28 @@
+.banner{
+    &__section{
+        height: 400px;
+        width: 100%;
+        display: flex;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    &__tagline-layer{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    &__tagline-cont{
+        width: 20%;
+        font-size: 60px;
+        color: $error-txt;
+    }
+    &__img{
+        height: 100%;
+        width: 100%;
+    }
+}

@@ -1,0 +1,26 @@
+.error{
+    &__section{
+        height: 200px;
+        width: 100%;
+        display: flex;
+        margin: 20px 0;
+        align-items: center;
+        justify-content: center;
+        background: $error-bg;
+    }
+    &__desc{
+        color: $error-txt;
+    }
+    &__item1{
+        font-weight: bold;
+        padding: 20px;
+    }
+    &__item2{
+        padding:20px;
+        a{
+            text-decoration: none;
+            font-weight: bold;
+            font-style: italic ;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@keyframes rotate-s-loader {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.loading{
+    &__cont{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__symbol-cont{
+        height: 100px;
+        width: 100px;
+        animation-name: rotate-s-loader;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+    }
+    &__symbol img{
+        height: 100%;
+        width: 100%;
+    }   
+}

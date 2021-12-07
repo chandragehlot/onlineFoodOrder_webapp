@@ -1,0 +1,35 @@
+$primary-color : #1f1f1f;
+$lightgray : #f2f1ed; 
+$white : #fff;
+$table_background:#4d4d4d;
+$table_border_color:#fff;
+$table-border: #606060;
+$row-bg: #282828;
+$socialicon: #fff;
+$error-bg: #ffcccc;
+$error-txt: #800000;
+
+$header-bg:#ffffff;
+$header-font:#5f88a3;
+
+div{
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+}
+.App, #root,.pagecont{
+    min-height: 100%;
+    background-color: $lightgray;
+}
+
+.d-flex{
+    display: flex;
+}
+.vh-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
