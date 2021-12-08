@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import applogo from '../../assets/khana-khazana.jpeg';
 
 const AppHeader = () => {
   return (
@@ -8,8 +9,7 @@ const AppHeader = () => {
         <div className="appHeader__logoCont">
           <div className="appHeader__logo">
           <Link to="/">
-            <span className="appHeader__logo_main">Khana</span>
-            <span className="appHeader__logo_sub">Khajana</span>
+            <img src={applogo} alt="khana khajana" />
           </Link>
           </div>
         </div>

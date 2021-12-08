@@ -6,7 +6,7 @@ const getMenuItems = () => {
 };
 
 const fetchCategories = () => {
-  return axios.get(`${config.BASE_API_URL}/menu/menu_categories`).then(res=> res.data);
+  return axios.get(`${config.BASE_API_URL}/menu/categories`).then(res=> res.data);
 }
 
 const apiService = {

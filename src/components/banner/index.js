@@ -1,5 +1,4 @@
 import React from 'react';
-import bannerImg from '../../assets/banner.jpeg';
 
 const Banner = () => {
     return (
@@ -9,7 +8,7 @@ const Banner = () => {
                     Eat healty, Stay healthy
                 </div>
             </div>
-            <img className="banner__img" src={bannerImg} alt="" />
+            <img className="banner__img" src={'https://ik.imagekit.io/a6n7g8ldqgi/fooddelivery/banner_yxocxn3KgV1.jpeg?updatedAt=1638912407414'} alt="" />
         </div>
     );
 };
