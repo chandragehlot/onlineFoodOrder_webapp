@@ -1,11 +1,11 @@
 import { 
     FETCH_MENU_REQ_START, 
-    EETCH_MENU_REQ_SUCC,
+    FETCH_MENU_REQ_SUCCESS,
     FETCH_MENU_REQ_ERR
  } from "../action/types";
 
 const initialState = {
-    menitems: [],
+    menuitems: [],
     isLoading: false,
     isError: false
 }
@@ -14,20 +14,19 @@ const MenuItemReducer = (state = initialState, action) => {
     switch (action.type) {
         case FETCH_MENU_REQ_START:
             return{
-                menitems: [],
+                menuitems: [],
                 isLoading: true,
                 isError: false
             }
-        case EETCH_MENU_REQ_SUCC:
+        case FETCH_MENU_REQ_SUCCESS:
             return {
                 ...state,
                 isLoading: false,
-                menitems : [...action.payload],
+                menuitems : action.payload,
             }
         case FETCH_MENU_REQ_ERR:
-            action.props.history.push('/error')
             return {
-                menitems : [],
+                menuitems : [],
                 isLoading: false,
                 isError: true
             }

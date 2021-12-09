@@ -9,9 +9,15 @@ const fetchCategories = () => {
   return axios.get(`${config.BASE_API_URL}/menu/categories`).then(res=> res.data);
 }
 
+const getMenuByCategory = (category) => {
+  const url = `${config.BASE_API_URL}/menu/menuitem/bycategory/${category}`;
+  return axios.get(url).then(res=> res.data);
+}
+
 const apiService = {
   getMenuItems,
-  fetchCategories
+  fetchCategories,
+  getMenuByCategory
 };
 
 export default apiService;

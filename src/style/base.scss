@@ -32,3 +32,32 @@ html, body{
     align-items: center;
     justify-content: center;
 }
+
+.text-xs{
+    font-size: 14px;
+    color:$primary-txt;
+}
+.text-s{
+    font-size: 16px;
+    color:$primary-txt;
+}
+.text-m{
+    font-size: 18px;
+    color:$primary-txt;
+}
+.text-l{
+    font-size: 20px;
+    color:$primary-txt;
+}
+.text-xl{
+    font-size: 24px;
+}
+
+.button-A{
+    min-height: 40px;
+    min-width: 60px;
+    padding: 12px 60px;
+    background-color: darkgreen;
+    color: #fff;
+    font-size: 16px;
+}

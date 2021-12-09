@@ -1,0 +1,22 @@
+.menupage{
+    &__navigation-cont {
+        flex: 1;
+        border-right: 1px solid gray;
+        height: auto;
+    }
+    
+    &__menu-cont {
+        flex: 2;
+        height: auto;
+    }
+    
+    &__cart-cont {
+        flex: 1;
+        border-left: 1px solid gray;
+    }
+    
+    &__cont {
+        width: 80%;
+        margin: auto;
+    }
+}

@@ -1,5 +1,13 @@
 import ApiService from '../services/apiServices';
-import { FETCH_CATEGORY_REQ_START, EETCH_CATEGORY_REQ_SUCC, FETCH_CATEGORY_REQ_ERR } from './types';
+import { 
+  FETCH_CATEGORY_REQ_START, 
+  EETCH_CATEGORY_REQ_SUCC, 
+  FETCH_CATEGORY_REQ_ERR,
+  SET_CATEGORY,
+  FETCH_MENU_REQ_START,
+  FETCH_MENU_REQ_SUCCESS,
+  FETCH_MENU_REQ_ERR
+} from './types';
 
 
 const retrieveCategories = (props) => async (dispatch) => {
@@ -16,9 +24,38 @@ const retrieveCategories = (props) => async (dispatch) => {
       console.log(err);
       dispatch({
         type: FETCH_CATEGORY_REQ_ERR,
-        props: props
       })
+      props.history.push('/error')
     }
   };
 
-export { retrieveCategories };
+  const setCategroyRedirectToMenu = (props,category) => {
+    return (dispatch) => {
+      dispatch({
+        type: SET_CATEGORY,
+        payload: category
+      })
+      props.history.push('/menu');
+    }
+  }
+
+  const FetchMenu = (props, category) => async (dispatch) => {
+    try {
+      dispatch({
+        type: FETCH_MENU_REQ_START
+      })
+      const menuItems = await ApiService.getMenuByCategory(category);
+      dispatch({
+        type: FETCH_MENU_REQ_SUCCESS,
+        payload: menuItems.resData
+      })
+    } catch (error) {
+        console.log(error);
+        dispatch({
+          type: FETCH_MENU_REQ_ERR
+        })
+        props.history.push('/error')
+    }
+  }
+
+export { retrieveCategories, setCategroyRedirectToMenu, FetchMenu };
