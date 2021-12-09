@@ -1,18 +1,38 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const Cart = () => {
+  const { cartitems = [], carttotal = null } = useSelector(state => state.cart)
   return (
     <div className="cart__cont">
-      <h2> Cart </h2>
-      <p> 4 Items</p>
-      <div className="cart__item">
-        <div className="cart__item-name"> Paneer Tikka </div>
-        <div className="cart__item-quantity"> 2 </div>
-        <div className="cart__item-price"> 545.89 </div>
+      <h2 className="text-xxl"> Cart </h2>
+      {
+        (cartitems.length) ?
+        <div>
+      <p className="text-xs"> {`${cartitems.length} Items` }</p>
+      {
+        cartitems.map((item,index) => (
+          <div className="cart__item text-s">
+          <div className="cart__item-name"> { item.name } </div>
+          <div className="cart__item-quantity"> { item.quantity } </div>
+          <div className="cart__item-price"> { item.item_total_price } </div>
+          </div>
+        ))
+      }
+
+      <div className="cart__total text-xl">
+        <div className="cart__total-tag"> SubTotal </div>
+        <div className="cart__total-val"> { carttotal } </div>
+      </div>
+      <div className="cart__disclaimer text-xs">
+        Extra charges may apply
       </div>
       <div className="cart__checkout">
         <button className="button-A">Checkout</button>
       </div>
+      </div>
+      :
+      <div> No Iterm Selected Yet </div> }
     </div>
   );
 };
