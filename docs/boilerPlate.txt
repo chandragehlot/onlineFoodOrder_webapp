@@ -1,0 +1,61 @@
+//Reducer Teamplate
+
+export const AAA_REQ_START = 'AAA_REQ_START';
+export const AAA_REQ_SUCCESS = 'AAA_REQ_SUCCESS';
+export const AAA_MENU_REQ_ERR = 'AAA_REQ_ERR';
+
+import { 
+    AAA_REQ_START,
+    AAA_REQ_SUCCESS,
+    AAA_MENU_REQ_ERR 
+} from '../action/types.js'
+
+const initialState = {
+
+}
+
+const Reducer = (state = initialState, action) => {
+    switch (action.type) {
+        case AAA_REQ_START:
+            return{
+                bbb: [],
+                isLoading: true,
+                isError: false
+            }
+        case AAA_REQ_SUCCESS:
+            return {
+                ...state,
+                isLoading: false,
+                bbb : [...action.payload],
+            }
+        case AAA_MENU_REQ_ERR:
+            return {
+                bbb : [],
+                isLoading: false,
+                isError: true
+            }
+        default:
+            return state;
+    }
+}
+
+// action templates
+
+const __action = (props) => async (dispatch) => {
+    try {
+      dispatch({
+        type: AAA_REQ_START
+      })
+      const ___ = await ApiService.fetch__();
+      dispatch({
+        type: AAA_REQ_SUCC,
+        payload: ___.resData
+      })
+    } catch (err) {
+      console.log(err);
+      dispatch({
+        type: AAA_REQ_ERR,
+      })
+      props.history.push('')
+    }
+  };
