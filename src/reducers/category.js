@@ -1,11 +1,13 @@
 import { 
     FETCH_CATEGORY_REQ_START, 
     EETCH_CATEGORY_REQ_SUCC,
-    FETCH_CATEGORY_REQ_ERR
+    FETCH_CATEGORY_REQ_ERR,
+    SET_CATEGORY
  } from "../action/types";
 
 const initialState = {
     categoryitems: [],
+    selectedCategory: '',
     isLoading: false,
     isError: false
 }
@@ -25,11 +27,15 @@ const CategoryReducer = (state = initialState, action) => {
                 categoryitems : [...action.payload],
             }
         case FETCH_CATEGORY_REQ_ERR:
-            action.props.history.push('/error')
             return {
                 categoryitems : [],
                 isLoading: false,
                 isError: true
+            }
+        case SET_CATEGORY:
+            return{
+                ...state,
+                selectedCategory: action.payload
             }
         default:
             return state;

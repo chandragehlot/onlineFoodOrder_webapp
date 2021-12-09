@@ -1,0 +1,40 @@
+.menuitem {
+  &__card {
+    border-bottom: 1px solid gray;
+    padding: 25px;
+    display: flex;
+  }
+
+  &__left-sec {
+    flex: 2;
+  }
+
+  &__right-sec {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__row {
+    display: flex;
+    padding: 10px 0;
+  }
+
+  &__imgcont {
+    height: 100px;
+    width: 100px;
+    border: 1px solid gray;
+    background: lightgray;
+  }
+
+  &__quantitySelector {
+    display: flex;
+    border: 1px solid gray;
+  }
+
+  &__quantity {
+    flex: 1;
+    padding: 8px 12px;
+  }
+}
