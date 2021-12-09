@@ -1,9 +1,13 @@
 import React from "react";
 import { useState, useLayoutEffect } from "react";
+import { useDispatch } from "react-redux";
+import { addMenuItemToCartAction } from "../../action/cart.action";
 
 
 const MenuItem = (props) => {
   const [menu, setMenu] = useState([]);
+  const dispatch = useDispatch();
+
 
   const increaseQuantity = (menuitem) => {
     const updatedMenu = menu.map(item => {
@@ -12,13 +16,16 @@ const MenuItem = (props) => {
       }
       return item;
     })
-    setMenu(updatedMenu)
+    //menuitem['quantity'] = menuitem['quantity'] + 1; 
+
+    setMenu(updatedMenu);
+    dispatch(addMenuItemToCartAction(menuitem))
   }
 
   const decreaseQuantity = (menuitem) => {
     const updatedMenu = menu.map(item => {
       if (item.id === menuitem.id) {
-        item.quantity = (item.quantity > 1) ? item.quantity - 1 : 1;
+        item.quantity = (item.quantity > 0) ? item.quantity - 1 : 0;
       }
       return item;
     })
@@ -26,7 +33,7 @@ const MenuItem = (props) => {
   }
 
   useLayoutEffect(()=>{
-    const menu1 = props.menuitems.map(item=>({...item, quantity: 1}))
+    const menu1 = props.menuitems.map(item=>({...item, quantity: 0}))
     setMenu(menu1);
   },[props]);
 

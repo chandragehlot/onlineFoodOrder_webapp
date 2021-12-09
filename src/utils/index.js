@@ -19,4 +19,21 @@ const getIcons = (iconKey) => {
   }
 };
 
-export { getIcons };
+const getCartItems = ({ cartitems = [] }, newItem) => {
+  // check if item already exist  
+  const foundIndex = cartitems.findIndex((item)=>item.id === newItem.id);
+  if(foundIndex >= 0){
+    cartitems.splice(foundIndex,1, newItem);
+    return {
+      cartitems: cartitems
+    }
+  } else {
+    return {
+      cartitems : [
+      ...cartitems,
+      newItem ]
+    }
+  }
+}
+
+export { getIcons, getCartItems };
