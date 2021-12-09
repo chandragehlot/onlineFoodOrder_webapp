@@ -16,7 +16,6 @@ const MenuItem = (props) => {
       }
       return item;
     })
-    //menuitem['quantity'] = menuitem['quantity'] + 1; 
 
     setMenu(updatedMenu);
     dispatch(addMenuItemToCartAction(menuitem))
@@ -33,8 +32,8 @@ const MenuItem = (props) => {
   }
 
   useLayoutEffect(()=>{
-    const menu1 = props.menuitems.map(item=>({...item, quantity: 0}))
-    setMenu(menu1);
+    const menuWithQuantity = props.menuitems.map(item=>({...item, quantity: 0}))
+    setMenu(menuWithQuantity);
   },[props]);
 
   return (

@@ -19,21 +19,31 @@ const getIcons = (iconKey) => {
   }
 };
 
-const getCartItems = ({ cartitems = [] }, newItem) => {
+const getCartItems = ({ cartitems = [], carttotal }, newItem) => {
   // check if item already exist  
   const foundIndex = cartitems.findIndex((item)=>item.id === newItem.id);
   if(foundIndex >= 0){
     cartitems.splice(foundIndex,1, newItem);
     return {
-      cartitems: cartitems
+      cartitems: cartitems,
+      carttotal: calculateCartTotal(cartitems)
     }
   } else {
-    return {
-      cartitems : [
+    const updatedcartitems = [
       ...cartitems,
-      newItem ]
+      newItem ];
+    return {
+      cartitems: updatedcartitems,
+      carttotal: calculateCartTotal(updatedcartitems)
     }
   }
+}
+
+function calculateCartTotal(itemArr=[]) {
+  const total = itemArr.reduce((total,item) => {
+    return total + item.item_total_price
+  },0);
+  return total;
 }
 
 export { getIcons, getCartItems };

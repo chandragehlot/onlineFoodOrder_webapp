@@ -31,8 +31,7 @@ const CartReducer = (state = initialState, action) => {
                 isError: true
             }
         case ADD_TO_CART:
-            const aaa = getCartItems(state, action.payload)
-            return aaa;
+            return getCartItems(state, action.payload)
         default:
             return state;
     }
