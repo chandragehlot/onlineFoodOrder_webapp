@@ -25,7 +25,6 @@ const HomeContainer = (props) => {
           <Banner></Banner>
           <h3 className="sub-heading"> Categories </h3>
           <MenuCategory categories={categoryitems} {...props} ></MenuCategory>
-          
         </div>
       )}
     </div>
