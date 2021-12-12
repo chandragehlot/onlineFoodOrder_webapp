@@ -1,3 +1,19 @@
 .navigation{
-    
+  &__cont {
+  }
+  &__items {
+  }
+  &__item{
+      text-align: right;
+      padding: 10px 20px;
+      width: 100%;
+      font-weight: bold;
+      font-size: 16px;
+      text-transform: capitalize;
+    &.highlight{
+        color: $secondary-color-a;
+        border-right: 5px solid $secondary-color-a;
+        font-size: 20px;
+    }
+  }
 }

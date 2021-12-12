@@ -1,15 +1,29 @@
 $primary-color : #5f88a3;
-$lightgray : #f2f1ed; 
-$white : #fff;
+$secondary-color-a: #fc8019;
+$terciary-color:#5d8ed5; 
 
+// color
+$dark-gray: #606060;
+$base-gray: #808080;
+$light-gray:#C0C0C0;
+$exlight-gray : #E0E0E0; 
+
+$white : #fff;
+$dark-green: #0f8a65;
+$light-green:#60b246;
+// error page colors
 $error-bg: #ffcccc;
 $error-txt: #800000;
 
-$header-bg:#5f88a3;
-$header-font:#fff;
+// header colors
+$header-bg:$primary-color;
+$header-font:$white;
 
-$primary-txt: black;
-$secondary-txt: gray;
+// text color
+$dark-txt: $dark-gray;
+$base-txt: $base-gray;
+$light-txt: $light-gray;
+$text-highlight: $secondary-color-a;
 
 div{
     box-sizing: border-box;
@@ -21,7 +35,7 @@ html, body{
 }
 .App, #root,.pagecont{
     min-height: 100%;
-    background-color: $lightgray;
+    background-color: $light-gray;
 }
 
 .d-flex{
@@ -35,26 +49,78 @@ html, body{
 
 .text-xs{
     font-size: 14px;
-    color:$primary-txt;
+    &-d{
+        font-size: 14px;
+        color:$dark-txt;
+    }
+    &-l{
+        font-size: 14px;
+        color:$light-txt;
+    }
 }
 .text-s{
     font-size: 16px;
-    color:$primary-txt;
+    &-d{
+        font-size: 16px;
+        color:$dark-txt;
+    }
+    &-l{
+        font-size: 16px;
+        color:$light-txt;
+    }
 }
 .text-m{
     font-size: 18px;
-    color:$primary-txt;
+    &-d{
+        font-size: 18px;
+        color:$dark-txt;
+    }
+    &-l{
+        font-size: 18px;
+        color:$light-txt;
+    }
 }
 .text-l{
     font-size: 20px;
-    color:$primary-txt;
+    &-d{
+        font-size: 20px;
+        color:$dark-txt;
+    }
+    &-l{
+        font-size: 20px;
+        color:$light-txt;
+    }
 }
 .text-xl{
-    font-size: 24px;
+    font-size: 22px;
+    &-d{
+        font-size: 22px;
+        color:$dark-txt;
+    }
+    &-l{
+        font-size: 22px;
+        color:$light-txt;
+    }
 }
 
 .text-xxl{
-    font-size: 28px;
+    font-size: 24px;
+    &-d{
+        font-size: 24px;
+        color:$dark-txt;
+    }
+    &-l{
+        font-size: 24px;
+        color:$light-txt;
+    }
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
+a{
+    text-decoration: none;
 }
 
 .button-A{
@@ -62,7 +128,8 @@ html, body{
     min-width: 60px;
     width: 100%;
     padding: 12px 60px;
-    background-color: darkgreen;
+    background-color: $light-green;
     color: #fff;
     font-size: 16px;
+    border: 0;
 }

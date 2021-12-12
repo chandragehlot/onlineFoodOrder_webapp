@@ -12,7 +12,7 @@ const MenuCategory = (props) => {
     return (
         <div className="category__section">
             <div className="category__cont">
-                <div className="category__items">
+                <div className="category__items vh-center">
                     { menuitems.length > 0 && menuitems.map((item,index) => (
                         <div 
                             key={`${index}-${item}`}

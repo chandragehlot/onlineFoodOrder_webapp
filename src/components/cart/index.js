@@ -20,11 +20,11 @@ const Cart = () => {
         ))
       }
 
-      <div className="cart__total text-xl">
+      <div className="cart__total">
         <div className="cart__total-tag"> SubTotal </div>
         <div className="cart__total-val"> { carttotal } </div>
       </div>
-      <div className="cart__disclaimer text-xs">
+      <div className="cart__disclaimer">
         Extra charges may apply
       </div>
       <div className="cart__checkout">

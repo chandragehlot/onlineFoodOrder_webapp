@@ -19,7 +19,7 @@ const LeftNaigation = (props) => {
           <div
             onClick={() => onclickNavItem(categoryitem)}
             key={`${categoryitem}-${index}`}
-            className={`navigation_item ${categoryitem === selCategory ? 'highlight' : ''}`}
+            className={`navigation__item ${categoryitem === selCategory ? 'highlight' : ''}`}
           >
             {categoryitem}
           </div>

@@ -21,10 +21,12 @@
     align-items: center;
     justify-content: space-between;
     margin: 20px 0 0;
+    @extend .text-xl-d;
   }
   &__disclaimer {
     text-align: left;
     margin-bottom: 20px;
     font-style: italic;
+    @extend .text-xs-l;
   }
 }

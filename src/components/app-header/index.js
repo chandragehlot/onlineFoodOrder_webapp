@@ -13,23 +13,26 @@ const AppHeader = () => {
           </Link>
           </div>
         </div>
-        <nav className="appHeader__profileCont">
-          <div className="appHeader__help">
+        <nav className="appHeader__section-cont">
+          <div className="appHeader__items">
             <Link to="/offers">Offers</Link>
           </div>
-          <div className="appHeader__help">
+          <div className="appHeader__items">
             <Link to="/stores">Store finder</Link>
           </div>
-          <div className="appHeader__help">
-            <Link to="/">corporate enquire</Link>
-          </div>
-        </nav>
-        <nav className="appHeader__profileCont">
-          <div className="appHeader__help">
+          <div className="appHeader__items">
             <Link to="/help">Help</Link>
           </div>
-          <div className="appHeader__help">
+          <div className="appHeader__items">
             <Link to="/contact">contact us</Link>
+          </div>
+        </nav>
+        <nav className="appHeader__section-cont">
+          <div className="appHeader__items">
+            <Link to="/help">SignUp</Link>
+          </div>
+          <div className="appHeader__items">
+            <Link to="/contact">Login</Link>
           </div>
         </nav>
       </div>
