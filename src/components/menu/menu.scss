@@ -1,6 +1,6 @@
 .menuitem {
   &__card {
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid $exlight-gray;
     padding: 25px;
     display: flex;
   }
@@ -24,13 +24,13 @@
   &__imgcont {
     height: 100px;
     width: 100px;
-    border: 1px solid gray;
-    background: lightgray;
+    border: 1px solid $dark-gray;
+    background: $light-gray;
   }
 
   &__quantitySelector {
     display: flex;
-    border: 1px solid gray;
+    border: 1px solid $base-gray;
   }
 
   &__quantity {
