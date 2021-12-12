@@ -10,12 +10,11 @@ const MenuContainer = (props) => {
   
   const dispatch = useDispatch();
   const { selectedCategory } = useSelector(state => state.categories);
-  const [category, setCategory] = useState(selectedCategory);
   const { menuitems = [] } = useSelector(state => state.menuData);
   
   useEffect(() => {
-    dispatch(FetchMenu(props, category))
-  }, [category]);
+    dispatch(FetchMenu(props, selectedCategory))
+  }, [dispatch, props, selectedCategory]);
 
   const isLoading = false;
   return (
@@ -25,7 +24,7 @@ const MenuContainer = (props) => {
       ) : (
         <div className="menupage__cont d-flex">
           <div className="menupage__navigation-cont">
-            <LeftNaigation onSelectCategory={setCategory}></LeftNaigation>
+            <LeftNaigation ></LeftNaigation>
           </div>
           <div className="menupage__menu-cont">
             <MenuItem menuitems={menuitems}></MenuItem>

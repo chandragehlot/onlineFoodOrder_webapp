@@ -1,16 +1,16 @@
 import React from "react";
-import { useState } from "react";
 import { useSelector } from "react-redux";
+import { setCategroy } from "../../action/category.action";
+import { useDispatch } from "react-redux";
 
-const LeftNaigation = (props) => {
+const LeftNaigation = () => {
   const { categoryitems, selectedCategory } = useSelector(
     (state) => state.categories
   );
-  const [selCategory, setSelCategory] = useState(selectedCategory);
+  const dispatch  = useDispatch();
 
   const onclickNavItem = (category) => {
-    setSelCategory(category);
-    props.onSelectCategory(category);
+    dispatch(setCategroy(category));
   };
   return (
     <div className="navigation__cont">
@@ -19,7 +19,7 @@ const LeftNaigation = (props) => {
           <div
             onClick={() => onclickNavItem(categoryitem)}
             key={`${categoryitem}-${index}`}
-            className={`navigation__item ${categoryitem === selCategory ? 'highlight' : ''}`}
+            className={`navigation__item ${categoryitem === selectedCategory ? 'highlight' : ''}`}
           >
             {categoryitem}
           </div>

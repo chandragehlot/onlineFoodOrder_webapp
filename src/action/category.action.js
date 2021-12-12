@@ -39,6 +39,15 @@ const retrieveCategories = (props) => async (dispatch) => {
     }
   }
 
+  const setCategroy = (category) => {
+    return (dispatch) => {
+      dispatch({
+        type: SET_CATEGORY,
+        payload: category
+      })
+    }
+  }
+
   const FetchMenu = (props, category) => async (dispatch) => {
     try {
       dispatch({
@@ -58,4 +67,4 @@ const retrieveCategories = (props) => async (dispatch) => {
     }
   }
 
-export { retrieveCategories, setCategroyRedirectToMenu, FetchMenu };
+export { retrieveCategories, setCategroyRedirectToMenu, FetchMenu, setCategroy };
