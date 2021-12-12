@@ -1,15 +1,24 @@
 $primary-color : #5f88a3;
+$secondary-color-a: #fc8019;
+$terciary-color:#5d8ed5; 
+
+// color
 $lightgray : #f2f1ed; 
 $white : #fff;
-
+$dark-green: #0f8a65;
+$light-green:#60b246;
+// error page colors
 $error-bg: #ffcccc;
 $error-txt: #800000;
 
-$header-bg:#5f88a3;
-$header-font:#fff;
+// header colors
+$header-bg:$primary-color;
+$header-font:$white;
 
-$primary-txt: black;
-$secondary-txt: gray;
+// text color
+$dark-txt: black;
+$light-txt: gray;
+$extra-light-txt: lightgray;
 
 div{
     box-sizing: border-box;
@@ -35,26 +44,64 @@ html, body{
 
 .text-xs{
     font-size: 14px;
-    color:$primary-txt;
+    &-d{
+        color:$dark-txt;
+    }
+    &-l{
+        color:$light-txt;
+    }
 }
 .text-s{
     font-size: 16px;
-    color:$primary-txt;
+    &-d{
+        color:$dark-txt;
+    }
+    &-l{
+        color:$light-txt;
+    }
 }
 .text-m{
     font-size: 18px;
-    color:$primary-txt;
+    &-d{
+        color:$dark-txt;
+    }
+    &-l{
+        color:$light-txt;
+    }
 }
 .text-l{
     font-size: 20px;
-    color:$primary-txt;
+    &-d{
+        color:$dark-txt;
+    }
+    &-l{
+        color:$light-txt;
+    }
 }
 .text-xl{
-    font-size: 24px;
+    &-d{
+        color:$dark-txt;
+    }
+    &-l{
+        color:$light-txt;
+    }
 }
 
 .text-xxl{
-    font-size: 28px;
+    &-d{
+        color:$dark-txt;
+    }
+    &-l{
+        color:$light-txt;
+    }
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
+a{
+    text-decoration: none;
 }
 
 .button-A{
@@ -62,7 +109,8 @@ html, body{
     min-width: 60px;
     width: 100%;
     padding: 12px 60px;
-    background-color: darkgreen;
+    background-color: $light-green;
     color: #fff;
     font-size: 16px;
+    border: 0;
 }
