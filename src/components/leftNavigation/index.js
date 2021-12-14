@@ -17,11 +17,11 @@ const LeftNaigation = () => {
       {categoryitems.length &&
         categoryitems.map((categoryitem, index) => (
           <div
-            onClick={() => onclickNavItem(categoryitem)}
-            key={`${categoryitem}-${index}`}
-            className={`navigation__item ${categoryitem === selectedCategory ? 'highlight' : ''}`}
+            onClick={() => onclickNavItem(categoryitem.category)}
+            key={`${categoryitem.category}-${index}`}
+            className={`navigation__item ${categoryitem.category === selectedCategory ? 'highlight' : ''}`}
           >
-            {categoryitem}
+            {categoryitem.category}
           </div>
         ))}
     </div>

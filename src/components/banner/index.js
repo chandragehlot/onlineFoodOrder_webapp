@@ -1,6 +1,8 @@
 import React from 'react';
+import { config, getImageUrl } from '../../config';
 
 const Banner = () => {
+    const banner_img_key = config.BANNER_IMAGE_KEY;
     return (
         <div className="banner__section">
             <div className="banner__tagline-layer">
@@ -8,7 +10,7 @@ const Banner = () => {
                     Eat healty, Stay healthy
                 </div>
             </div>
-            <img className="banner__img" src={'https://ik.imagekit.io/a6n7g8ldqgi/fooddelivery/banner_yxocxn3KgV1.jpeg?updatedAt=1638912407414'} alt="" />
+            <img className="banner__img" src={getImageUrl(banner_img_key)} alt="Banner" />
         </div>
     );
 };
