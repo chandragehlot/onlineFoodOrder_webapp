@@ -5,7 +5,7 @@ import {
 } from "../action/types";
 
 const initialState = {
-  menuitems: [],
+  menuitemsCont: {},
   isLoading: false,
   isError: false,
 };
@@ -14,7 +14,7 @@ const MenuItemReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_MENU_REQ_START:
       return {
-        menuitems: [],
+        ...state,
         isLoading: true,
         isError: false,
       };
@@ -22,11 +22,11 @@ const MenuItemReducer = (state = initialState, action) => {
       return {
         ...state,
         isLoading: false,
-        menuitems: action.payload,
+        menuitemsCont: { ...state.menuitemsCont, [action.category] : action.payload },
       };
     case FETCH_MENU_REQ_ERR:
       return {
-        menuitems: [],
+        ...state,
         isLoading: false,
         isError: true,
       };
