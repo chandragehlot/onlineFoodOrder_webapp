@@ -59,3 +59,6 @@ const __action = (props) => async (dispatch) => {
       props.history.push('')
     }
   };
+
+// banner image url
+  //'https://ik.imagekit.io/a6n7g8ldqgi/fooddelivery/banner_yxocxn3KgV1.jpeg?updatedAt=1638912407414'
