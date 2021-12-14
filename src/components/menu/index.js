@@ -1,11 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import { addMenuItemToCartAction } from "../../action/cart.action";
+import { FetchMenu } from "../../action/category.action";
 
 const MenuItem = (props) => {
   const [menu, setMenu] = useState([]);
   const dispatch = useDispatch();
+  const { selectedCategory } = useSelector(state => state.categories);
+  const { menuitemsCont = {} } = useSelector(state => state.menuData);
 
   const increaseQuantity = (menuitem) => {
     const updatedMenu = menu.map((item) => {
@@ -30,14 +33,23 @@ const MenuItem = (props) => {
   };
 
   useEffect(() => {
-    const { menuitemsCont, category } = props;
-    const menuitems = (Object.keys(menuitemsCont).length > 0 && menuitemsCont[category] !== undefined) ? menuitemsCont[category] : [];
+    const menuitems = (Object.keys(menuitemsCont).length > 0 && menuitemsCont[selectedCategory] !== undefined) ? menuitemsCont[selectedCategory] : [];
     const menuWithQuantity = menuitems.map((item) => ({
       ...item,
       quantity: 0,
     }));
     setMenu(menuWithQuantity);
-  }, [props]);
+  }, [menuitemsCont, selectedCategory]);
+
+  useEffect(() => {
+    // check if cateegory present in menuitemsCont
+    const existingCategories = Object.keys(menuitemsCont)
+    if(existingCategories.length === 0 || !existingCategories.includes(selectedCategory)){
+      dispatch(FetchMenu(props, selectedCategory))
+    }else{
+      return;
+    }
+  }, [dispatch, menuitemsCont, props, selectedCategory]);
 
   return (
     <div className="menuitem__cont">

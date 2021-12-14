@@ -8,19 +8,19 @@ import { FetchMenu } from "../../action/category.action";
 
 const MenuContainer = (props) => {
   
-  const dispatch = useDispatch();
-  const { selectedCategory } = useSelector(state => state.categories);
-  const { menuitemsCont = {} } = useSelector(state => state.menuData);
+  // const dispatch = useDispatch();
+  // const { selectedCategory } = useSelector(state => state.categories);
+  // const { menuitemsCont = {} } = useSelector(state => state.menuData);
   
-  useEffect(() => {
-    // check if cateegory present in menuitemsCont
-    const existingCategories = Object.keys(menuitemsCont)
-    if(existingCategories.length === 0 || !existingCategories.includes(selectedCategory)){
-      dispatch(FetchMenu(props, selectedCategory))
-    }else{
-      return;
-    }
-  }, [dispatch, menuitemsCont, props, selectedCategory]);
+  // useEffect(() => {
+  //   // check if cateegory present in menuitemsCont
+  //   const existingCategories = Object.keys(menuitemsCont)
+  //   if(existingCategories.length === 0 || !existingCategories.includes(selectedCategory)){
+  //     dispatch(FetchMenu(props, selectedCategory))
+  //   }else{
+  //     return;
+  //   }
+  // }, [dispatch, menuitemsCont, props, selectedCategory]);
 
   const isLoading = false;
   return (
@@ -33,7 +33,8 @@ const MenuContainer = (props) => {
             <LeftNaigation ></LeftNaigation>
           </div>
           <div className="menupage__menu-cont">
-            <MenuItem menuitemsCont={menuitemsCont} category = { selectedCategory }></MenuItem>
+            {/* <MenuItem menuitemsCont={menuitemsCont} category = { selectedCategory }></MenuItem> */}
+            <MenuItem></MenuItem>
           </div>
           <div className="menupage__cart-cont">
             <Cart></Cart>
