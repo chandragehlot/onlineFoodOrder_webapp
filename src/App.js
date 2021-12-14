@@ -1,29 +1,26 @@
-import './style/combine.scss';
+import "./style/combine.scss";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect
-} from 'react-router-dom';
-import { createStore, applyMiddleware } from 'redux';
+  Redirect,
+} from "react-router-dom";
+import { createStore, applyMiddleware } from "redux";
 
-import { Provider } from 'react-redux';
-import { rootReducer } from './reducers';
-import thunk from 'redux-thunk';
-import { createLogger } from 'redux-logger';
+import { Provider } from "react-redux";
+import { rootReducer } from "./reducers";
+import thunk from "redux-thunk";
+import { createLogger } from "redux-logger";
 
-import AppHeader from './components/app-header';
-import HomeContainer from './container/home';
-import MenuContainer from './container/menu-page';
+import AppHeader from "./components/app-header";
+import HomeContainer from "./container/home";
+import MenuContainer from "./container/menu-page";
 import Footer from "./components/footer";
-import Error  from './components/error';
+import Error from "./components/error";
 
 const logger = createLogger({});
 
-const store = createStore(
-  rootReducer,
-  applyMiddleware(thunk, logger)
-);
+const store = createStore(rootReducer, applyMiddleware(thunk, logger));
 
 function App() {
   return (
@@ -31,14 +28,16 @@ function App() {
       <Provider store={store}>
         <Router>
           <AppHeader></AppHeader>
-          <Switch>
-            <Route exact path="/">
-              <Redirect to="/home" />
-            </Route>
-            <Route path="/home" component={HomeContainer}></Route>
-            <Route path="/menu" component={MenuContainer}></Route>
-            <Route path="/error" component={Error}></Route>
-          </Switch>
+          <div className="app-body-holder">
+            <Switch>
+              <Route exact path="/">
+                <Redirect to="/home" />
+              </Route>
+              <Route path="/home" component={HomeContainer}></Route>
+              <Route path="/menu" component={MenuContainer}></Route>
+              <Route path="/error" component={Error}></Route>
+            </Switch>
+          </div>
           <Footer></Footer>
         </Router>
       </Provider>
