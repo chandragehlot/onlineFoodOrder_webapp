@@ -17,6 +17,7 @@ import HomeContainer from "./container/home";
 import MenuContainer from "./container/menu-page";
 import Footer from "./components/footer";
 import Error from "./components/error";
+import TutorialPage from "./tutorial";
 
 const logger = createLogger({});
 
@@ -31,8 +32,9 @@ function App() {
           <div className="app-body-holder">
             <Switch>
               <Route exact path="/">
-                <Redirect to="/home" />
+                <Redirect to="/tutorial" />
               </Route>
+              <Route path="/tutorial" component={TutorialPage}></Route>
               <Route path="/home" component={HomeContainer}></Route>
               <Route path="/menu" component={MenuContainer}></Route>
               <Route path="/error" component={Error}></Route>
