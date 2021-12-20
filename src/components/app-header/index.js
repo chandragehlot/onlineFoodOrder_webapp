@@ -15,7 +15,7 @@ const AppHeader = () => {
         </div>
         <nav className="appHeader__section-cont">
           <div className="appHeader__items">
-            <Link to="/offers">Offers</Link>
+            <Link to="/tutorial">Offers</Link>
           </div>
           <div className="appHeader__items">
             <Link to="/stores">Store finder</Link>

@@ -43,4 +43,4 @@ const CarList = (props) => {
 };
 
 
-export { CarList };
+export default CarList;

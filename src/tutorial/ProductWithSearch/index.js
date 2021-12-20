@@ -4,6 +4,4 @@ import { ProductsList } from "../ProductList";
 
 const ProductsListWithSearch = WithSearch(ProductsList);
 
-export {
-  ProductsListWithSearch
-}
+export default ProductsListWithSearch;

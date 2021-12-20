@@ -1,3 +1,4 @@
+import React , { Suspense, lazy } from 'react';
 import "./style/combine.scss";
 import {
   BrowserRouter as Router,
@@ -17,8 +18,10 @@ import HomeContainer from "./container/home";
 import MenuContainer from "./container/menu-page";
 import Footer from "./components/footer";
 import Error from "./components/error";
-import TutorialPage from "./tutorial";
+import MouseTracker from './tutorial/MousePointer';
+//import TutorialPage from "./tutorial";
 
+const TutorialPage = lazy(()=> import('./tutorial'));
 const logger = createLogger({});
 
 const store = createStore(rootReducer, applyMiddleware(thunk, logger));
@@ -28,17 +31,21 @@ function App() {
     <div className="App">
       <Provider store={store}>
         <Router>
+          
           <AppHeader></AppHeader>
           <div className="app-body-holder">
+            <Suspense fallback={<div>Loading...</div>}>
             <Switch>
               <Route exact path="/">
-                <Redirect to="/tutorial" />
+                <Redirect to="/home" />
               </Route>
-              <Route path="/tutorial" component={TutorialPage}></Route>
               <Route path="/home" component={HomeContainer}></Route>
               <Route path="/menu" component={MenuContainer}></Route>
+              <Route path="/tutorial" component={TutorialPage}></Route>
+              <Route path="/mousetracker" component={MouseTracker}></Route>
               <Route path="/error" component={Error}></Route>
             </Switch>
+            </Suspense>
           </div>
           <Footer></Footer>
         </Router>
