@@ -1,0 +1,40 @@
+.carausal__cont {
+    background: transparent;
+}
+
+.carausal__subcont {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.carausal_items {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    background: white;
+    margin: 0 20px;
+}
+
+.carausal__item_cont {
+    display: flex;
+    padding: 20px 0;
+    background: black;
+    flex-wrap: wrap;
+    height: 240px;
+}
+
+.carausal_items.active{
+    display: flex;
+}
+
+.carausal_items.inactive{
+    display: none;
+}
+
+.carausal__btn-cont{
+    padding: 10px;
+    border-radius: 40px;
+    font-size: 40px;
+    font-weight: bold;
+}

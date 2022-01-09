@@ -17,6 +17,7 @@ import HomeContainer from "./container/home";
 import MenuContainer from "./container/menu-page";
 import Footer from "./components/footer";
 import Error from "./components/error";
+import OfferPage from "./container/offer";
 
 const logger = createLogger({});
 
@@ -35,6 +36,7 @@ function App() {
               </Route>
               <Route path="/home" component={HomeContainer}></Route>
               <Route path="/menu" component={MenuContainer}></Route>
+              <Route path="/offers" component={OfferPage}></Route>
               <Route path="/error" component={Error}></Route>
             </Switch>
           </div>
