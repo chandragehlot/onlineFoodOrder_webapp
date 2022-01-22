@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.214a7163.chunk.css",
+    "main.js": "/static/js/main.b0b612da.chunk.js",
+    "main.js.map": "/static/js/main.b0b612da.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.81383b84.js",
+    "runtime-main.js.map": "/static/js/runtime-main.81383b84.js.map",
+    "static/js/2.464555f7.chunk.js": "/static/js/2.464555f7.chunk.js",
+    "static/js/2.464555f7.chunk.js.map": "/static/js/2.464555f7.chunk.js.map",
+    "static/js/3.e8aa01e1.chunk.js": "/static/js/3.e8aa01e1.chunk.js",
+    "static/js/3.e8aa01e1.chunk.js.map": "/static/js/3.e8aa01e1.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.214a7163.chunk.css.map": "/static/css/main.214a7163.chunk.css.map",
+    "static/js/2.464555f7.chunk.js.LICENSE.txt": "/static/js/2.464555f7.chunk.js.LICENSE.txt",
+    "static/media/facebook.2cd134e7.svg": "/static/media/facebook.2cd134e7.svg",
+    "static/media/instagram.377212f6.svg": "/static/media/instagram.377212f6.svg",
+    "static/media/khana-khazana.0ad95e77.jpeg": "/static/media/khana-khazana.0ad95e77.jpeg",
+    "static/media/linkedin.0618cc90.svg": "/static/media/linkedin.0618cc90.svg",
+    "static/media/loading.61700b5a.svg": "/static/media/loading.61700b5a.svg",
+    "static/media/share.3d24933c.svg": "/static/media/share.3d24933c.svg",
+    "static/media/twitter.fa3779b1.svg": "/static/media/twitter.fa3779b1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.81383b84.js",
+    "static/js/2.464555f7.chunk.js",
+    "static/css/main.214a7163.chunk.css",
+    "static/js/main.b0b612da.chunk.js"
+  ]
+}
