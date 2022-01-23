@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import applogo from '../../assets/freshbite.png';
-
+import applogo from "../../assets/freshbite.png";
 
 import { MdOutlineLocalOffer } from "react-icons/md";
 import { FaHandsHelping, FaSignInAlt, FaUserPlus } from "react-icons/fa";
@@ -13,17 +12,17 @@ const AppHeader = () => {
       <div className="appHeader__cont">
         <div className="appHeader__logoCont">
           <div className="appHeader__logo">
-          <Link to="/">
-            <img src={applogo} alt="khana khajana" />
-          </Link>
+            <Link to="/">
+              <img src={applogo} alt="khana khajana" />
+            </Link>
           </div>
         </div>
         <nav className="appHeader__section-cont">
           <div className="appHeader__items">
-            <div className="pd-r-10">   <MdOutlineLocalOffer/> </div>
-            
+            <div className="pd-r-10">
+              <MdOutlineLocalOffer />
+            </div>
             <Link to="/offers">Offers</Link>
-            
           </div>
           <div className="appHeader__items">
             <div className="pd-r-10">
@@ -47,7 +46,7 @@ const AppHeader = () => {
         <nav className="appHeader__section-cont">
           <div className="appHeader__items">
             <div className="pd-r-10">
-              <FaUserPlus /> 
+              <FaUserPlus />
             </div>
             <Link to="/help">SignUp</Link>
           </div>

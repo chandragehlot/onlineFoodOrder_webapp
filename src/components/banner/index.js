@@ -7,7 +7,7 @@ const Banner = () => {
         <div className="banner__section">
             <div className="banner__tagline-layer">
                 <div className="banner__tagline-cont">
-                    Eat healty, Stay healthy
+                    Eat B healty, Stay B healthy
                 </div>
             </div>
             <img className="banner__img" src={getImageUrl(banner_img_key)} alt="Banner" />
