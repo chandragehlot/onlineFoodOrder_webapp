@@ -1,15 +1,16 @@
 import React from "react";
 import { useSelector } from "react-redux";
- 
-import { FaCartPlus } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
+import { BiFoodTag } from "react-icons/bi";
 
 const Cart = () => {
   const { cartitems = [], carttotal = null } = useSelector(state => state.cart)
   return (
     <div className="cart__cont">
-      <div className="vh-center">
+
+      <div className="flex-vc-hl">
         <div className="pd-r-10 text-xl-d">
-          <FaCartPlus />
+          <FaShoppingCart />
         </div>
         <h2 className="text-xxl"> 
           Cart 
@@ -23,6 +24,9 @@ const Cart = () => {
       {
         cartitems.map((item,index) => (
           <div className="cart__item text-s">
+          <div className={`cart__item_foodtag__${item.type}`}>
+            <BiFoodTag />
+          </div>
           <div className="cart__item-name"> { item.name } </div>
           <div className="cart__item-quantity"> { item.quantity } </div>
           <div className="cart__item-price"> { item.item_total_price } </div>
@@ -42,7 +46,7 @@ const Cart = () => {
       </div>
       </div>
       :
-      <div> No Iterm Selected Yet </div> }
+      <div className="flex-vc-hl"> No Iterm Selected Yet </div> }
     </div>
   );
 };

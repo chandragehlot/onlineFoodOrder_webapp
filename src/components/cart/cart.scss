@@ -16,6 +16,14 @@
     justify-content: space-between;
     padding: 10px 0;
   }
+  &__item_foodtag{
+    &__veg{
+      color: $veg;
+    }
+    &__nonveg{
+      color: $non-veg;
+    }
+  }
   &__total {
     display: flex;
     align-items: center;

@@ -9,7 +9,7 @@ $light-gray:#C0C0C0;
 $exlight-gray : #E0E0E0; 
 $veg: #0f8a65;
 $non-veg:#843821;
-$star : #ffcc00;
+$star : #ee9c00;
 $white : #fff;
 $dark-green: #0f8a65;
 $light-green:#60b246;
@@ -47,6 +47,12 @@ html, body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.flex-vc-hl{
+    display: flex;
+    align-items: center;
+    justify-content: start;
 }
 
 .text-xs{
