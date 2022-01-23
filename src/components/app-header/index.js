@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import applogo from '../../assets/khana-khazana.jpeg';
+import applogo from '../../assets/freshbite.png';
 
 const AppHeader = () => {
   return (
