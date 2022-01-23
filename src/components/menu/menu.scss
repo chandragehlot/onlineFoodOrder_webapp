@@ -21,6 +21,14 @@
     padding: 10px 0;
   }
 
+  &__foodtype-icon_veg{
+    color : $veg;
+  }
+
+  &__foodtype-icon_nonveg{
+    color: $non-veg;
+  }
+
   &__imgcont {
     height: 100px;
     width: 100px;

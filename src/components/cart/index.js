@@ -1,11 +1,21 @@
 import React from "react";
 import { useSelector } from "react-redux";
+ 
+import { FaCartPlus } from "react-icons/fa";
 
 const Cart = () => {
   const { cartitems = [], carttotal = null } = useSelector(state => state.cart)
   return (
     <div className="cart__cont">
-      <h2 className="text-xxl"> Cart </h2>
+      <div className="vh-center">
+        <div className="pd-r-10 text-xl-d">
+          <FaCartPlus />
+        </div>
+        <h2 className="text-xxl"> 
+          Cart 
+        </h2>      
+      </div>
+
       {
         (cartitems.length) ?
         <div>

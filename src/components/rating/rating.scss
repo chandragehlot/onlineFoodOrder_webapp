@@ -1,0 +1,8 @@
+.rating{
+    &__cont{
+        display: flex;
+    }
+    &__icon{
+        color: $star;
+    }
+}

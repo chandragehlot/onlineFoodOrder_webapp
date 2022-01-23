@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 import { useDispatch,useSelector } from "react-redux";
 import { addMenuItemToCartAction } from "../../action/cart.action";
 import { FetchMenu } from "../../action/category.action";
+import Rating from "../rating";
+import { BiFoodTag } from "react-icons/bi";
+import { FaRupeeSign } from "react-icons/fa"
 
 const MenuItem = (props) => {
   const [menu, setMenu] = useState([]);
@@ -58,17 +61,20 @@ const MenuItem = (props) => {
           <div key={`${menuitem.id}`} className="menuitem__card">
             <div className="menuitem__left-sec">
               <div className="menuitem__row">
-                <div className="menuitem__foodtype-icon">{menuitem.type}</div>
+                <div className={ `menuitem__foodtype-icon_${menuitem.type}`}>
+                  <BiFoodTag></BiFoodTag>
+                  </div>
                 <div className="menuitem__rating">
-                  {" "}
-                  {menuitem.rating} {"star"}
+                  <Rating rating={menuitem.rating}></Rating>
                 </div>
               </div>
               <div className="menuitem__row">
-                <div className="font-l">{menuitem.name}</div>
+                <div className="font-xxl-d txt-capitalize">{menuitem.name}</div>
               </div>
               <div className="menuitem__row">
-                <div className="font-s"> {menuitem.price} </div>
+                <div> <FaRupeeSign /> </div>
+                <div className="font-s">
+                   {menuitem.price} </div>
               </div>
             </div>
             <div className="menuitem__right-sec">

@@ -7,7 +7,9 @@ $dark-gray: #606060;
 $base-gray: #808080;
 $light-gray:#C0C0C0;
 $exlight-gray : #E0E0E0; 
-
+$veg: #0f8a65;
+$non-veg:#843821;
+$star : #ffcc00;
 $white : #fff;
 $dark-green: #0f8a65;
 $light-green:#60b246;
@@ -115,6 +117,10 @@ html, body{
     }
 }
 
+.txt-capitalize{
+    text-transform: capitalize;
+}
+
 img{
     height: 100%;
     width: 100%;
@@ -132,4 +138,13 @@ a{
     color: #fff;
     font-size: 16px;
     border: 0;
+}
+
+//spacing
+.pd-r-10{
+    padding-right: 10px;
+}
+
+.pd-r-20{
+    padding-right: 20px;
 }
