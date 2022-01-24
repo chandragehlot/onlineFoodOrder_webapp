@@ -15,6 +15,8 @@ import { createLogger } from "redux-logger";
 import AppHeader from "./components/app-header";
 import HomeContainer from "./container/home";
 import MenuContainer from "./container/menu-page";
+import SignUpContainer from "./container/signup";
+import LoginContainer from "./container/login";
 import Footer from "./components/footer";
 import Error from "./components/error";
 
@@ -35,6 +37,8 @@ function App() {
               </Route>
               <Route path="/home" component={HomeContainer}></Route>
               <Route path="/menu" component={MenuContainer}></Route>
+              <Route path="/login" component={LoginContainer}></Route>
+              <Route path="/signup" component={SignUpContainer}></Route>
               <Route path="/error" component={Error}></Route>
             </Switch>
           </div>

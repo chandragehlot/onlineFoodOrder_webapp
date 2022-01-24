@@ -48,13 +48,13 @@ const AppHeader = () => {
             <div className="pd-r-10">
               <FaUserPlus />
             </div>
-            <Link to="/help">SignUp</Link>
+            <Link to="/signup">SignUp</Link>
           </div>
           <div className="appHeader__items">
             <div className="pd-r-10">
               <FaSignInAlt></FaSignInAlt>
             </div>
-            <Link to="/contact">Login</Link>
+            <Link to="/login">Login</Link>
           </div>
         </nav>
       </div>
