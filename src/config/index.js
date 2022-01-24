@@ -1,7 +1,20 @@
+function getBaseApiByENV(key){
+    switch (key) {
+        case 'LOCAL':
+            return process.env.REACT_APP_LOCAL_SERVER_ENDPOINT;
+        case 'UAT':
+            return process.env.REACT_APP_UAT_SERVER_ENDPOINT;
+            case 'PROD':
+            return process.env.REACT_APP_PROD_SERVER_ENDPOINT;
+        default:
+            return process.env.REACT_APP_LOCAL_SERVER_ENDPOINT;
+    }
+}
 
+const environment = process.env.REACT_APP_ENV;
 
 const config = {
-    BASE_API_URL: 'http://ec2-54-90-242-254.compute-1.amazonaws.com/api/v1',
+    BASE_API_URL: getBaseApiByENV(environment),
     IMAGE_CDN_BASE_URL: 'https://ik.imagekit.io/a6n7g8ldqgi/fooddelivery',
     BANNER_IMAGE_KEY: 'banner_yxocxn3KgV1.jpeg?updatedAt=1638912407414'
 }
@@ -12,6 +25,3 @@ const getImageUrl = (imageKey) => {
 }
 
 export { config, getImageUrl};
-
-// dev : http://ec2-54-90-242-254.compute-1.amazonaws.com/api/v1
-// local : http://localhost:9000/api/v1
