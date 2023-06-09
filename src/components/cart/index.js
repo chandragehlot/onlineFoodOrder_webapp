@@ -2,8 +2,14 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { FaShoppingCart } from "react-icons/fa";
 import { BiFoodTag } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
+  const navigate = useNavigate();
+
+  const checkoutHandler = () => {
+    navigate("/order")
+  }
   const { cartitems = [], carttotal = null } = useSelector(state => state.cart)
   return (
     <div className="cart__cont">
@@ -23,7 +29,8 @@ const Cart = () => {
       <p className="text-xs"> {`${cartitems.length} Items` }</p>
       {
         cartitems.map((item,index) => (
-          <div className="cart__item text-s">
+          
+          <div className="cart__item text-s" key={index+(index+1)}>
           <div className={`cart__item_foodtag__${item.type}`}>
             <BiFoodTag />
           </div>
@@ -42,7 +49,7 @@ const Cart = () => {
         Extra charges may apply
       </div>
       <div className="cart__checkout">
-        <button className="button-A">Checkout</button>
+        <button className="button-A" onClick={checkoutHandler}>Checkout</button>
       </div>
       </div>
       :

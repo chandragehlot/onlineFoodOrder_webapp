@@ -1,3 +1,4 @@
+
 import ApiService from "../services/apiServices";
 import {
   FETCH_CATEGORY_REQ_START,
@@ -8,6 +9,8 @@ import {
   FETCH_MENU_REQ_SUCCESS,
   FETCH_MENU_REQ_ERR,
 } from "./types";
+
+
 
 const retrieveCategories = (props) => async (dispatch) => {
   try {
@@ -28,13 +31,13 @@ const retrieveCategories = (props) => async (dispatch) => {
   }
 };
 
-const setCategroyRedirectToMenu = (props, category) => {
+const setCategroyRedirectToMenu = (navigate, category) => {
   return (dispatch) => {
     dispatch({
       type: SET_CATEGORY,
       payload: category,
     });
-    props.history.push("/menu");
+    navigate("/menu");
   };
 };
 

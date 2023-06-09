@@ -12,4 +12,4 @@ export const AAA_REQ_START = 'AAA_REQ_START';
 export const AAA_REQ_SUCCESS = 'AAA_REQ_SUCCESS';
 export const AAA_MENU_REQ_ERR = 'AAA_REQ_ERR';
 
-
+export const ADD_ADDRESS = "ADD_ADDRESS";

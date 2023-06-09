@@ -7,7 +7,7 @@ const Rating = (props) => {
     return (
         <div className="rating__cont">
             { ratingArr.length > 0 && ratingArr.map((item, index) => (
-                <div className='rating__icon' key={item + index}> 
+                <div className='rating__icon' key={index+1}> 
                     <FaStar />
                 </div>
             )) }
