@@ -19,6 +19,8 @@ import LoginContainer from "./container/login";
 import Footer from "./components/footer";
 import OrderContainer from "./container/order";
 import AddressEntry from "./container/address";
+import OrderConfirmation from "./container/order-confirmation";
+import OrderTracking from "./container/order-tracking";
 
 
 const logger = createLogger({});
@@ -40,6 +42,9 @@ function App() {
               <Route path="/login" element={<LoginContainer/>}/>
               <Route path="/signup" element={<SignUpContainer/>}/>
               <Route path="/address" element={<AddressEntry/>} />
+              <Route path="/order-confirm" element={<OrderConfirmation/>} />
+              <Route path="/order-tracking" element={<OrderTracking/>} />
+              {/* <Route path="/" element={</>} /> */}
             </Routes>
           </div>
           <Footer></Footer>

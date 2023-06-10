@@ -1,23 +1,77 @@
-import { ADD_ADDRESS } from "../action/types";
+import {
+  ADD_ADDRESS_REQ_ERR,
+  ADD_ADDRESS_REQ_START,
+  ADD_ADDRESS_REQ_SUCCESS,
+  GET_ADDRESS_REQ_ERR,
+  GET_ADDRESS_REQ_START,
+  GET_ADDRESS_REQ_SUCCESS,
+  SET_DEFAULT_ADDRESS,
+} from "../action/types";
 
 const initialState = {
-  fullName: "",
-  phoneNumber: "",
-  address1: "",
-  address2: "",
-  city: "",
-  pincode: "",
-  addresstype: "",
+  addressList: [
+    {
+      fullName: "",
+      phoneNumber: "",
+      address1: "",
+      address2: "",
+      city: "",
+      pincode: "",
+      addresstype: "",
+    },
+  ],
+  defaultAddress: {},
+  isLoading: false,
+  isError: false,
 };
 
-const AddressReducer = (state = initialState, action) => {
+const addressReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_ADDRESS:
+    case ADD_ADDRESS_REQ_START:
+      return {
+        ...state,
+        isLoading: true,
+        isError: false,
+      };
+    case ADD_ADDRESS_REQ_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        addressList: [...state.addressList, action.payload],
+      };
+    case ADD_ADDRESS_REQ_ERR:
+      return {
+        ...state,
+        isLoading: false,
+        isError: true,
+      };
+    case GET_ADDRESS_REQ_START:
+      return {
+        ...state,
+        isLoading: true,
+        isError: false,
+      };
+    case GET_ADDRESS_REQ_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        addressList: [...action.payload.addressList],
+      };
+    case GET_ADDRESS_REQ_ERR:
+      return {
+        ...state,
+        isLoading: false,
+        isError: true,
+      };
 
-      return  {...state, ...action.payload };
+    case SET_DEFAULT_ADDRESS:
+      return {
+        ...state,
+        defaultAddress: action.payload,
+      };
     default:
       return state;
   }
 };
 
-export { AddressReducer };
+export { addressReducer };

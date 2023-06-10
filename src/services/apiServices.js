@@ -15,10 +15,24 @@ const getMenuByCategory = (category) => {
   return axios.get(url).then(res=> res.data);
 }
 
+const addNewAddress = (data) => {
+  const url = `${config.BASE_API_URL}/address/addAddress`;
+  return axios.post(url, data).then((res) => {
+    return res.data;
+  })
+}
+
+const getAddressList = () => {
+  const url = `${config.BASE_API_URL}/address/getAddressList`;
+  return axios.get(url).then(res=> res.data);
+}
+
 const apiService = {
   getMenuItems,
   fetchCategories,
-  getMenuByCategory
+  getMenuByCategory,
+  addNewAddress,
+  getAddressList
 };
 
 export default apiService;

@@ -5,6 +5,7 @@ export const ADDRESS2 = "ADDRESS2 ";
 export const CITY = "CITY ";
 export const PINCODE = "PINCODE ";
 export const ADDRESS_TYPE = "ADDRESS_TYPE";
+export const RESET_FORM = "RESET_FORM";
 
 export const initialFormState = {
     fullName: "",
@@ -53,6 +54,11 @@ export const formReducer = (state, action) => {
             ...state,
             addresstype: action.payload,
           };
+          
+        case RESET_FORM:
+          return {
+              ...initialFormState
+            };     
     default:
       break;
   }

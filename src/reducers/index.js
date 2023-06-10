@@ -4,12 +4,12 @@ import CartReducer from './cart';
 
 
 import { combineReducers } from "redux";
-import { AddressReducer } from './address';
+import { addressReducer } from './address';
 
 
 export const rootReducer = combineReducers({
     menuData : MenuItemReducer,
     categories : CategoryReducer,
     cart: CartReducer,
-    address: AddressReducer
+    address: addressReducer
 });

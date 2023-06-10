@@ -1,0 +1,46 @@
+Widget-A
+html -
+<div className="section-container">
+  <div className="section">
+    <div className="section-heading"> heading </div>
+    <div className="section-body">
+      body
+    </div>
+  </div>
+</div>
+
+css -
+
+.section-container{
+    display: flex;
+    flex-direction: column;
+}
+.section{
+    flex: 1;
+    border: 1px solid $light-gray;
+    margin-bottom: 10px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+
+}
+.section-heading{
+    min-height: 40px;
+    min-width: 60px;
+    width: 100%;
+    padding: 12px 15px;
+    background-color: $light-blue;
+    color: #fff;
+    font-size: 16px;
+    border: 0;
+    text-align: left;
+}
+.section-body{
+    padding : 10px;
+}
+
+Widget-B
+
+html-
+ 
+css-
