@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d957640b.css",
+    "main.js": "/static/js/main.cdad974a.js",
+    "static/js/787.5d015b4a.chunk.js": "/static/js/787.5d015b4a.chunk.js",
+    "static/media/freshbite.png": "/static/media/freshbite.3fa653920e4140951121.png",
+    "static/media/instagram.svg": "/static/media/instagram.377212f64a6689e1c1ecba9abd505720.svg",
+    "static/media/loading.svg": "/static/media/loading.61700b5a8e928844ccf9d9eccc1fcde5.svg",
+    "static/media/twitter.svg": "/static/media/twitter.fa3779b1b7e99d8f0736b7bcce820cac.svg",
+    "index.html": "/index.html",
+    "static/media/linkedin.svg": "/static/media/linkedin.0618cc9075b54a042c69cdf3e1cb1fa4.svg",
+    "static/media/facebook.svg": "/static/media/facebook.2cd134e7de0a50ae1e48737d3e9105fe.svg",
+    "static/media/share.svg": "/static/media/share.3d24933cdd9610034ec70c24c940775d.svg",
+    "main.d957640b.css.map": "/static/css/main.d957640b.css.map",
+    "main.cdad974a.js.map": "/static/js/main.cdad974a.js.map",
+    "787.5d015b4a.chunk.js.map": "/static/js/787.5d015b4a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d957640b.css",
+    "static/js/main.cdad974a.js"
+  ]
+}
