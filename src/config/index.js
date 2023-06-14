@@ -14,7 +14,7 @@ function getBaseApiByENV(key){
 const environment = process.env.REACT_APP_ENV;
 
 const config = {
-    BASE_API_URL: getBaseApiByENV(environment),
+    BASE_API_URL: 'http://ec2-3-250-9-164.eu-west-1.compute.amazonaws.com/',
     IMAGE_CDN_BASE_URL: 'https://ik.imagekit.io/a6n7g8ldqgi/fooddelivery',
     BANNER_IMAGE_KEY: 'banner_yxocxn3KgV1.jpeg?updatedAt=1638912407414'
 }
