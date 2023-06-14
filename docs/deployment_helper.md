@@ -49,3 +49,13 @@ sudo systemctl restart nginx
 
 # conenct RDS mysql instance 
 mysql -h foodorderdb.cmhqa3wxmetc.us-east-1.rds.amazonaws.com -P 3306 -u foodOMasterUser -p
+
+# install mysql on the same instanc 
+
+sudo install -y mysql-server
+
+mysqladmin -u root password Hello@123
+
+ALTER USER  'root'@'localhost' IDENTIFIED BY 'sql_native_password' AS 'Hello@123';
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Hello@123';
