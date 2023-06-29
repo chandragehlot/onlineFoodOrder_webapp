@@ -30,6 +30,8 @@ function AddressEntry() {
   }, [reduxDispatch]);
 
   const handleFormFieldChange = (e, fieldName) => {
+    console.log('909090\n\n', fieldName);
+    console.log('8979898 \n\n', e.target.value);
     dispatch({
       type: fieldName,
       payload: e.target.value,
@@ -40,6 +42,7 @@ function AddressEntry() {
     dispatch({
       type: RESET_FORM,
     });
+    console.log('address form state', formState)
     reduxDispatch(addNewAddressAction(formState));
   };
 
@@ -127,16 +130,18 @@ function AddressEntry() {
               />{" "}
             </div>
             <br />
-
-            {/* <label htmlFor="home">
-              <input type="radio" name="addresstype" id="home" />
-            </label>
-    
-            <label htmlFor="work">
-              <input type="radio" name="addresstype" id="work" />
-            </label>
-    
-            <input type="submit"> Submit </input> */}
+            <div className="vh-center">
+              <div className="pd-lr-10">
+                <label htmlFor="home">
+                  <input type="radio" name="addresstype" id="home" value="home" onChange={(e) => handleFormFieldChange(e, "ADDRESS_TYPE")}/> HOME
+                </label>
+              </div>
+              <div className="pd-lr-10">
+                <label htmlFor="work">
+                  <input type="radio" name="addresstype" id="work" value="office" onChange={(e) => handleFormFieldChange(e, "ADDRESS_TYPE")}/> WORK
+                </label>
+              </div>
+            </div>
 
             <button type="submit" onClick={handleAddressAddSubmit}>
               {" "}
@@ -161,9 +166,13 @@ function AddressEntry() {
               <div> Pin Code :{addressItem.pincode} </div>
               <div> Address Type :{addressItem.addresstype} </div>
               <div>
-                <button className=""
+                <button
+                  className=""
                   onClick={() => setAddressAsDefault(addressItem)}
-                > set Address As default </button>
+                >
+                  {" "}
+                  set Address As default{" "}
+                </button>
               </div>
             </div>
           ))}

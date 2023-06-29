@@ -16,7 +16,7 @@ const environment = process.env.REACT_APP_ENV;
 console.log("environment", environment);
 console.log("environment", process.env.NODE_ENV);
 
-const base_api_url =  (environment === 'development') ? `${window.location.href}api/v1`: 'http://localhost:9000/api/v1';
+const base_api_url =  (environment === 'development') ? `${window.location.href}api/v2`: 'http://localhost:8009/api/v2';
 
 const config = {
     BASE_API_URL: base_api_url,

@@ -16,14 +16,14 @@ const getMenuByCategory = (category) => {
 }
 
 const addNewAddress = (data) => {
-  const url = `${config.BASE_API_URL}/address/addAddress`;
+  const url = `${config.BASE_API_URL}/address/addAddressForUser`;
   return axios.post(url, data).then((res) => {
     return res.data;
   })
 }
 
 const getAddressList = () => {
-  const url = `${config.BASE_API_URL}/address/getAddressList`;
+  const url = `${config.BASE_API_URL}/address/getAllAddressForUser?userName=UserId1`;
   return axios.get(url).then(res=> res.data);
 }
 
