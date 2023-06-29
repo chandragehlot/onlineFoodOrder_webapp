@@ -58,7 +58,7 @@ const MenuItem = (props) => {
     <div className="menuitem__cont">
       {menu.length &&
         menu.map((menuitem) => (
-          <div key={`${menuitem.id}`} className="menuitem__card">
+          <div key={menuitem.id} className="menuitem__card">
             <div className="menuitem__left-sec">
               <div className="menuitem__row">
                 <div className={ `menuitem__foodtype-icon_${menuitem.type}`}>

@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import applogo from "../../assets/freshbite.png";
 
+// light
+// dark
 import { MdOutlineLocalOffer } from "react-icons/md";
 import { FaHandsHelping, FaSignInAlt, FaUserPlus } from "react-icons/fa";
 import { AiOutlineContacts, AiOutlineFileSearch } from "react-icons/ai";
@@ -28,7 +30,7 @@ const AppHeader = () => {
             <div className="pd-r-10">
               <AiOutlineFileSearch />
             </div>
-            <Link to="/stores">Store finder</Link>
+            <Link to="/address">Address</Link>
           </div>
           <div className="appHeader__items">
             <div className="pd-r-10">
@@ -48,13 +50,13 @@ const AppHeader = () => {
             <div className="pd-r-10">
               <FaUserPlus />
             </div>
-            <Link to="/help">SignUp</Link>
+            <Link to="/signup">SignUp</Link>
           </div>
           <div className="appHeader__items">
             <div className="pd-r-10">
               <FaSignInAlt></FaSignInAlt>
             </div>
-            <Link to="/contact">Login</Link>
+            <Link to="/login">Login</Link>
           </div>
         </nav>
       </div>
