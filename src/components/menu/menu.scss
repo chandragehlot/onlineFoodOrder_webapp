@@ -30,8 +30,8 @@
   }
 
   &__imgcont {
-    height: 100px;
-    width: 100px;
+    height: 110px;
+    width: 150px;
     border: 1px solid $dark-gray;
     background: $light-gray;
   }
@@ -39,6 +39,7 @@
   &__quantitySelector {
     display: flex;
     border: 1px solid $base-gray;
+    width: 150px;
   }
 
   &__quantity {
