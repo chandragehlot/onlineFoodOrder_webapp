@@ -1,4 +1,6 @@
-import "./style/combine.scss"
+import "./style/combine.scss";
+
+import './index.css';
 
 import { BrowserRouter as Router,
 Routes,
@@ -21,6 +23,8 @@ import OrderContainer from "./container/order";
 import AddressEntry from "./container/address";
 import OrderConfirmation from "./container/order-confirmation";
 import OrderTracking from "./container/order-tracking";
+import OrderNew from "./container/order-new";
+
 
 
 const logger = createLogger({});
@@ -38,13 +42,12 @@ function App() {
               <Route exact path="/" element={<HomeContainer/>}/>
               <Route path="/home" element={<HomeContainer/>}/>
               <Route path="/menu" element={<MenuContainer/>}/>
-              <Route path="/order" element={<OrderContainer/>}/>
+              <Route path="/order" element={<OrderNew/>}/>
               <Route path="/login" element={<LoginContainer/>}/>
               <Route path="/signup" element={<SignUpContainer/>}/>
               <Route path="/address" element={<AddressEntry/>} />
               <Route path="/order-confirm" element={<OrderConfirmation/>} />
               <Route path="/order-tracking" element={<OrderTracking/>} />
-              {/* <Route path="/" element={</>} /> */}
             </Routes>
           </div>
           <Footer></Footer>
