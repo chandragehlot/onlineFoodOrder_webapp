@@ -6,6 +6,8 @@ import {
   GET_ADDRESS_REQ_START,
   GET_ADDRESS_REQ_ERR,
   GET_ADDRESS_REQ_SUCCESS,
+  SET_DEFAULT_ADDRESS,
+  SET_DELIVERY_ADDRESS
 } from "./types";
 
 const UserID = 'userId1'
@@ -15,7 +17,6 @@ export const addNewAddressAction = (address) => async (dispatch) => {
     dispatch({
       type: ADD_ADDRESS_REQ_START,
     });
-    console.log('address 5000', address)
     const addressWithUserId = { ...address, username: UserID};
     console.log("addressWithUserId", addressWithUserId);
     const apiResponse = await apiService.addNewAddress(addressWithUserId);
@@ -48,3 +49,20 @@ export const getAddressListAction = () => async (dispatch) => {
     });
   }
 };
+
+//defaultAddress
+export const setDefaultAddress = (id) => {
+  return {
+      type: SET_DEFAULT_ADDRESS,
+      payload: id
+    }
+}
+
+// delivery Address
+
+export const setDeliveryAddressAction = (address) => {
+  return {
+    type: SET_DELIVERY_ADDRESS,
+    payload: address
+  }
+}
