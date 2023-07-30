@@ -1,8 +1,8 @@
 import React from 'react';
-import { config, getImageUrl } from '../../config';
 
-const Banner = () => {
-    const banner_img_key = config.BANNER_IMAGE_KEY;
+
+const Banner = ({src}) => {
+    
     return (
         <div className="banner__section">
             <div className="banner__tagline-layer">
@@ -10,7 +10,7 @@ const Banner = () => {
                     Eat B healty, Stay B healthy
                 </div>
             </div>
-            <img className="banner__img" src={getImageUrl(banner_img_key)} alt="Banner" />
+            <img className="banner__img" src={src} alt="Banner" />
         </div>
     );
 };
