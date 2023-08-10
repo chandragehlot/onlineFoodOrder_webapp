@@ -1,0 +1,634 @@
+{
+    "menuData": {
+        "menuitemsCont": {
+            "south": [
+                {
+                    "id": 1,
+                    "name": "masala dosa",
+                    "foodtype": "veg",
+                    "mainCategory": "south",
+                    "price": 200,
+                    "courseType": "starter",
+                    "rating": 4,
+                    "description": "This is the description placeholder",
+                    "itemImage": 1,
+                    "IMAGE_MAPPING": {
+                        "id": 1,
+                        "imagekey": "south",
+                        "imageurl": "south_wwebkYnGEzQ.jpg?updatedAt=1639146161359",
+                        "CDN_fileId": null
+                    },
+                    "quantity": 2
+                },
+                {
+                    "id": 2,
+                    "name": "rava dosa",
+                    "foodtype": "veg",
+                    "mainCategory": "south",
+                    "price": 100,
+                    "courseType": "starter",
+                    "rating": 2,
+                    "description": "This is the description placeholder",
+                    "itemImage": 1,
+                    "IMAGE_MAPPING": {
+                        "id": 1,
+                        "imagekey": "south",
+                        "imageurl": "south_wwebkYnGEzQ.jpg?updatedAt=1639146161359",
+                        "CDN_fileId": null
+                    },
+                    "quantity": 1
+                },
+                {
+                    "id": 3,
+                    "name": "paneer dosa",
+                    "foodtype": "veg",
+                    "mainCategory": "south",
+                    "price": 200,
+                    "courseType": "starter",
+                    "rating": 4,
+                    "description": "This is the description placeholder",
+                    "itemImage": 1,
+                    "IMAGE_MAPPING": {
+                        "id": 1,
+                        "imagekey": "south",
+                        "imageurl": "south_wwebkYnGEzQ.jpg?updatedAt=1639146161359",
+                        "CDN_fileId": null
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 4,
+                    "name": "chicken dosa",
+                    "foodtype": "nonveg",
+                    "mainCategory": "south",
+                    "price": 200,
+                    "courseType": "starter",
+                    "rating": 5,
+                    "description": "This is the description placeholder",
+                    "itemImage": 1,
+                    "IMAGE_MAPPING": {
+                        "id": 1,
+                        "imagekey": "south",
+                        "imageurl": "south_wwebkYnGEzQ.jpg?updatedAt=1639146161359",
+                        "CDN_fileId": null
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 5,
+                    "name": "idli",
+                    "foodtype": "veg",
+                    "mainCategory": "south",
+                    "price": 200,
+                    "courseType": "starter",
+                    "rating": 1,
+                    "description": "This is the description placeholder",
+                    "itemImage": 1,
+                    "IMAGE_MAPPING": {
+                        "id": 1,
+                        "imagekey": "south",
+                        "imageurl": "south_wwebkYnGEzQ.jpg?updatedAt=1639146161359",
+                        "CDN_fileId": null
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 6,
+                    "name": "fried idli",
+                    "foodtype": "veg",
+                    "mainCategory": "south",
+                    "price": 200,
+                    "courseType": "starter",
+                    "rating": 2,
+                    "description": "This is the description placeholder",
+                    "itemImage": 1,
+                    "IMAGE_MAPPING": {
+                        "id": 1,
+                        "imagekey": "south",
+                        "imageurl": "south_wwebkYnGEzQ.jpg?updatedAt=1639146161359",
+                        "CDN_fileId": null
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 7,
+                    "name": "idli samber",
+                    "foodtype": "veg",
+                    "mainCategory": "south",
+                    "price": 500,
+                    "courseType": "starter",
+                    "rating": 4,
+                    "description": "This is the description placeholder",
+                    "itemImage": 1,
+                    "IMAGE_MAPPING": {
+                        "id": 1,
+                        "imagekey": "south",
+                        "imageurl": "south_wwebkYnGEzQ.jpg?updatedAt=1639146161359",
+                        "CDN_fileId": null
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 19,
+                    "name": "Mendu Wada",
+                    "foodtype": "veg",
+                    "mainCategory": "south",
+                    "price": 80,
+                    "courseType": "starter",
+                    "rating": 5,
+                    "description": "this is des of mendu wada",
+                    "itemImage": 13,
+                    "IMAGE_MAPPING": {
+                        "id": 13,
+                        "imagekey": "menuItem",
+                        "imageurl": "mendu-wada_glZu8dR5k.jpeg",
+                        "CDN_fileId": null
+                    },
+                    "quantity": 0
+                }
+            ],
+            "north": [
+                {
+                    "id": 8,
+                    "name": "paneer masala",
+                    "foodtype": "veg",
+                    "mainCategory": "north",
+                    "price": 200,
+                    "courseType": "maincourse",
+                    "rating": 5,
+                    "description": "This is the description placeholder",
+                    "itemImage": 1,
+                    "IMAGE_MAPPING": {
+                        "id": 1,
+                        "imagekey": "south",
+                        "imageurl": "south_wwebkYnGEzQ.jpg?updatedAt=1639146161359",
+                        "CDN_fileId": null
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 9,
+                    "name": "sahi paneer",
+                    "foodtype": "veg",
+                    "mainCategory": "north",
+                    "price": 200,
+                    "courseType": "maincourse",
+                    "rating": 1,
+                    "description": "This is the description placeholder",
+                    "itemImage": 1,
+                    "IMAGE_MAPPING": {
+                        "id": 1,
+                        "imagekey": "south",
+                        "imageurl": "south_wwebkYnGEzQ.jpg?updatedAt=1639146161359",
+                        "CDN_fileId": null
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 10,
+                    "name": "chicken curry",
+                    "foodtype": "nonveg",
+                    "mainCategory": "north",
+                    "price": 200,
+                    "courseType": "maincourse",
+                    "rating": 4,
+                    "description": "This is the description placeholder",
+                    "itemImage": 1,
+                    "IMAGE_MAPPING": {
+                        "id": 1,
+                        "imagekey": "south",
+                        "imageurl": "south_wwebkYnGEzQ.jpg?updatedAt=1639146161359",
+                        "CDN_fileId": null
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 11,
+                    "name": "chicken dosa",
+                    "foodtype": "nonveg",
+                    "mainCategory": "north",
+                    "price": 200,
+                    "courseType": "maincourse",
+                    "rating": 5,
+                    "description": "This is the description placeholder",
+                    "itemImage": 1,
+                    "IMAGE_MAPPING": {
+                        "id": 1,
+                        "imagekey": "south",
+                        "imageurl": "south_wwebkYnGEzQ.jpg?updatedAt=1639146161359",
+                        "CDN_fileId": null
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 17,
+                    "name": "Chocolate Ice Cream",
+                    "foodtype": "veg",
+                    "mainCategory": "north",
+                    "price": 450,
+                    "courseType": "dessert",
+                    "rating": 1,
+                    "description": "This is the description placeholder",
+                    "itemImage": 1,
+                    "IMAGE_MAPPING": {
+                        "id": 1,
+                        "imagekey": "south",
+                        "imageurl": "south_wwebkYnGEzQ.jpg?updatedAt=1639146161359",
+                        "CDN_fileId": null
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 20,
+                    "name": "soya chap",
+                    "foodtype": "veg",
+                    "mainCategory": "north",
+                    "price": 150,
+                    "courseType": "starter",
+                    "rating": 5,
+                    "description": "This is the description of the Soya Chap",
+                    "itemImage": 14,
+                    "IMAGE_MAPPING": {
+                        "id": 14,
+                        "imagekey": "menuItem",
+                        "imageurl": "soyachap_LzRs_EnVO.jpeg",
+                        "CDN_fileId": null
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 21,
+                    "name": "panner tikka chap",
+                    "foodtype": "veg",
+                    "mainCategory": "north",
+                    "price": 160,
+                    "courseType": "starter",
+                    "rating": 5,
+                    "description": "This is the description of the Paneer tikka chap Chap",
+                    "itemImage": 15,
+                    "IMAGE_MAPPING": {
+                        "id": 15,
+                        "imagekey": "menuItem",
+                        "imageurl": "panner_tikka_chap_4_RiA5lml.jpeg",
+                        "CDN_fileId": null
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 22,
+                    "name": "chhola bhatura",
+                    "foodtype": "veg",
+                    "mainCategory": "north",
+                    "price": 120,
+                    "courseType": "starter",
+                    "rating": 5,
+                    "description": "This is the description of the Paneer tikka chap Chap",
+                    "itemImage": 16,
+                    "IMAGE_MAPPING": {
+                        "id": 16,
+                        "imagekey": "menuItem",
+                        "imageurl": "Chhole-Bhature14334_PU_NibsQs.jpeg",
+                        "CDN_fileId": null
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 31,
+                    "name": "samosa",
+                    "foodtype": "veg",
+                    "mainCategory": "north",
+                    "price": 30,
+                    "courseType": "starter",
+                    "rating": 5,
+                    "description": "dummy description samosa",
+                    "itemImage": 25,
+                    "IMAGE_MAPPING": {
+                        "id": 25,
+                        "imagekey": "menuItem",
+                        "imageurl": "Flaunt_in_traditional_work__uPkBD1UyS.jpeg",
+                        "CDN_fileId": "64a82d8c06370748f2436c8d"
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 32,
+                    "name": "Gobhi 65",
+                    "foodtype": "veg",
+                    "mainCategory": "north",
+                    "price": 113,
+                    "courseType": "starter",
+                    "rating": 5,
+                    "description": "Gobhi 65 description",
+                    "itemImage": 26,
+                    "IMAGE_MAPPING": {
+                        "id": 26,
+                        "imagekey": "menuItem",
+                        "imageurl": "Screenshot_2023-07-15_at_4.50.25_PM_LLaMz_A9b.png",
+                        "CDN_fileId": "64b2bb4906370748f2796162"
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 33,
+                    "name": "lassi",
+                    "foodtype": "veg",
+                    "mainCategory": "north",
+                    "price": 37,
+                    "courseType": "dessert",
+                    "rating": 5,
+                    "description": "This is lassi description",
+                    "itemImage": 27,
+                    "IMAGE_MAPPING": {
+                        "id": 27,
+                        "imagekey": "menuItem",
+                        "imageurl": "sweet-lassi-recipe-featured_ghEPSt5tK.webp",
+                        "CDN_fileId": "64b2c1f706370748f28ccd0c"
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 34,
+                    "name": "soda",
+                    "foodtype": "veg",
+                    "mainCategory": "north",
+                    "price": 14,
+                    "courseType": "dessert",
+                    "rating": 5,
+                    "description": "sdfsafsafsafsafsda",
+                    "itemImage": 28,
+                    "IMAGE_MAPPING": {
+                        "id": 28,
+                        "imagekey": "menuItem",
+                        "imageurl": "Screenshot_2023-07-15_at_4.50.25_PM_YemnZACt9.png",
+                        "CDN_fileId": "64b2cc3906370748f2ab7d6a"
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 35,
+                    "name": "badam milk",
+                    "foodtype": "veg",
+                    "mainCategory": "north",
+                    "price": 30,
+                    "courseType": "dessert",
+                    "rating": 5,
+                    "description": "dafsdfasfdsafa asdfsa fasdfsd fsdaf",
+                    "itemImage": 29,
+                    "IMAGE_MAPPING": {
+                        "id": 29,
+                        "imagekey": "menuItem",
+                        "imageurl": "sweet-lassi-recipe-featured_WP99ed6gh.webp",
+                        "CDN_fileId": "64b2e4f806370748f2ecd3bf"
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 36,
+                    "name": "badam milk 2",
+                    "foodtype": "veg",
+                    "mainCategory": "north",
+                    "price": 30,
+                    "courseType": "dessert",
+                    "rating": 5,
+                    "description": "dafsdfasfdsafa asdfsa fasdfsd fsdaf",
+                    "itemImage": 30,
+                    "IMAGE_MAPPING": {
+                        "id": 30,
+                        "imagekey": "menuItem",
+                        "imageurl": "sweet-lassi-recipe-featured_5jjCePYys.webp",
+                        "CDN_fileId": "64b2e51b06370748f2ed1875"
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 37,
+                    "name": "badam milk 3",
+                    "foodtype": "veg",
+                    "mainCategory": "north",
+                    "price": 30,
+                    "courseType": "dessert",
+                    "rating": 5,
+                    "description": "dafsdfasfdsafa asdfsa fasdfsd fsdaf",
+                    "itemImage": 31,
+                    "IMAGE_MAPPING": {
+                        "id": 31,
+                        "imagekey": "menuItem",
+                        "imageurl": "sweet-lassi-recipe-featured_iHTVLYYgw.webp",
+                        "CDN_fileId": "64b2e52c06370748f2ed41d9"
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 38,
+                    "name": "badam milk 4",
+                    "foodtype": "veg",
+                    "mainCategory": "north",
+                    "price": 30,
+                    "courseType": "dessert",
+                    "rating": 5,
+                    "description": "dafsdfasfdsafa asdfsa fasdfsd fsdaf",
+                    "itemImage": 32,
+                    "IMAGE_MAPPING": {
+                        "id": 32,
+                        "imagekey": "menuItem",
+                        "imageurl": "sweet-lassi-recipe-featured_z0wLUkamE.webp",
+                        "CDN_fileId": "64b2e53d06370748f2ed688d"
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 39,
+                    "name": "dahi wad",
+                    "foodtype": "veg",
+                    "mainCategory": "north",
+                    "price": 38,
+                    "courseType": "starter",
+                    "rating": 5,
+                    "description": "dsfsafsdafdsaf",
+                    "itemImage": 33,
+                    "IMAGE_MAPPING": {
+                        "id": 33,
+                        "imagekey": "menuItem",
+                        "imageurl": "dahiwada__0AwpKw7R.jpeg",
+                        "CDN_fileId": "64b386c006370748f2570a26"
+                    },
+                    "quantity": 0
+                }
+            ],
+            "pizza": [
+                {
+                    "id": 12,
+                    "name": "veggie supreme",
+                    "foodtype": "veg",
+                    "mainCategory": "pizza",
+                    "price": 200,
+                    "courseType": "starter",
+                    "rating": 2,
+                    "description": "This is the description placeholder",
+                    "itemImage": 1,
+                    "IMAGE_MAPPING": {
+                        "id": 1,
+                        "imagekey": "south",
+                        "imageurl": "south_wwebkYnGEzQ.jpg?updatedAt=1639146161359",
+                        "CDN_fileId": null
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 13,
+                    "name": "veggie delite",
+                    "foodtype": "veg",
+                    "mainCategory": "pizza",
+                    "price": 100,
+                    "courseType": "starter",
+                    "rating": 4,
+                    "description": "This is the description placeholder",
+                    "itemImage": 1,
+                    "IMAGE_MAPPING": {
+                        "id": 1,
+                        "imagekey": "south",
+                        "imageurl": "south_wwebkYnGEzQ.jpg?updatedAt=1639146161359",
+                        "CDN_fileId": null
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 14,
+                    "name": "Margherita",
+                    "foodtype": "veg",
+                    "mainCategory": "pizza",
+                    "price": 100,
+                    "courseType": "starter",
+                    "rating": 5,
+                    "description": "This is the description placeholder",
+                    "itemImage": 1,
+                    "IMAGE_MAPPING": {
+                        "id": 1,
+                        "imagekey": "south",
+                        "imageurl": "south_wwebkYnGEzQ.jpg?updatedAt=1639146161359",
+                        "CDN_fileId": null
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 15,
+                    "name": "freshvaggie",
+                    "foodtype": "veg",
+                    "mainCategory": "pizza",
+                    "price": 250,
+                    "courseType": "starter",
+                    "rating": 2,
+                    "description": "This is the description placeholder",
+                    "itemImage": 1,
+                    "IMAGE_MAPPING": {
+                        "id": 1,
+                        "imagekey": "south",
+                        "imageurl": "south_wwebkYnGEzQ.jpg?updatedAt=1639146161359",
+                        "CDN_fileId": null
+                    },
+                    "quantity": 0
+                },
+                {
+                    "id": 16,
+                    "name": "Extravagenza",
+                    "foodtype": "veg",
+                    "mainCategory": "pizza",
+                    "price": 410,
+                    "courseType": "starter",
+                    "rating": 1,
+                    "description": "This is the description placeholder",
+                    "itemImage": 1,
+                    "IMAGE_MAPPING": {
+                        "id": 1,
+                        "imagekey": "south",
+                        "imageurl": "south_wwebkYnGEzQ.jpg?updatedAt=1639146161359",
+                        "CDN_fileId": null
+                    },
+                    "quantity": 0
+                }
+            ]
+        },
+        "isLoading": false,
+        "isError": false
+    },
+    "categories": {
+        "categoryitems": [
+            {
+                "category": "south",
+                "image_url_key": "south_wwebkYnGEzQ.jpg?updatedAt=1639146161359"
+            },
+            {
+                "category": "north",
+                "image_url_key": "nort_ccGM1sG9y.jpg?updatedAt=1639146161272"
+            },
+            {
+                "category": "pizza",
+                "image_url_key": "pizza_XGOMQ5TXs.jpg?updatedAt=1639146161282"
+            }
+        ],
+        "isLoading": false,
+        "isError": false,
+        "selectedCategory": "south"
+    },
+    "cart": {
+        "cartitems": [
+            {
+                "id": 1,
+                "name": "masala dosa",
+                "foodtype": "veg",
+                "mainCategory": "south",
+                "price": 200,
+                "courseType": "starter",
+                "rating": 4,
+                "description": "This is the description placeholder",
+                "itemImage": 1,
+                "IMAGE_MAPPING": {
+                    "id": 1,
+                    "imagekey": "south",
+                    "imageurl": "south_wwebkYnGEzQ.jpg?updatedAt=1639146161359",
+                    "CDN_fileId": null
+                },
+                "quantity": 2,
+                "item_total_price": 400
+            },
+            {
+                "id": 2,
+                "name": "rava dosa",
+                "foodtype": "veg",
+                "mainCategory": "south",
+                "price": 100,
+                "courseType": "starter",
+                "rating": 2,
+                "description": "This is the description placeholder",
+                "itemImage": 1,
+                "IMAGE_MAPPING": {
+                    "id": 1,
+                    "imagekey": "south",
+                    "imageurl": "south_wwebkYnGEzQ.jpg?updatedAt=1639146161359",
+                    "CDN_fileId": null
+                },
+                "quantity": 1,
+                "item_total_price": 100
+            }
+        ],
+        "carttotal": 500
+    },
+    "address": {
+        "addressList": [
+            {
+                "fullName": "",
+                "phoneNumber": "",
+                "address1": "",
+                "address2": "",
+                "city": "",
+                "pincode": "",
+                "addresstype": "",
+                "isDefault": false
+            }
+        ],
+        "defaultAddress": {},
+        "isLoading": false,
+        "isError": false,
+        "deliveryAddress": {}
+    }
+}

@@ -1,66 +1,21 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { addMenuItemToCartAction } from "../../action/cart.action";
-import { FetchMenu } from "../../action/category.action";
 import Rating from "../rating";
 import { BiFoodTag } from "react-icons/bi";
 import { FaRupeeSign } from "react-icons/fa";
 import { getImageUrl } from "../../config";
 
 const MenuItem = (props) => {
-  const [menu, setMenu] = useState([]);
-  const dispatch = useDispatch();
-  const { selectedCategory } = useSelector((state) => state.categories);
-  const { menuitemsCont = {} } = useSelector((state) => state.menuData);
+  const { menu, updateQuantityHandler }= props;
 
   const increaseQuantity = (menuitem) => {
-    const updatedMenu = menu.map((item) => {
-      if (item.id === menuitem.id) {
-        item.quantity = item.quantity + 1;
-      }
-      return item;
-    });
-
-    setMenu(updatedMenu);
-    dispatch(addMenuItemToCartAction(menuitem));
+    updateQuantityHandler('increase', menuitem)
   };
 
   const decreaseQuantity = (menuitem) => {
-    const updatedMenu = menu.map((item) => {
-      if (item.id === menuitem.id) {
-        item.quantity = item.quantity > 0 ? item.quantity - 1 : 0;
-      }
-      return item;
-    });
-    setMenu(updatedMenu);
-  };
-
-  useEffect(() => {
-    const menuitems =
-      Object.keys(menuitemsCont).length > 0 &&
-      menuitemsCont[selectedCategory] !== undefined
-        ? menuitemsCont[selectedCategory]
-        : [];
-    const menuWithQuantity = menuitems.map((item) => ({
-      ...item,
-      quantity: 0,
-    }));
-    setMenu(menuWithQuantity);
-  }, [menuitemsCont, selectedCategory]);
-
-  useEffect(() => {
-    // check if cateegory present in menuitemsCont
-    const existingCategories = Object.keys(menuitemsCont);
-    if (
-      existingCategories.length === 0 ||
-      !existingCategories.includes(selectedCategory)
-    ) {
-      dispatch(FetchMenu(props, selectedCategory));
-    } else {
-      return;
+    if(menuitem.quantity > 0){
+      updateQuantityHandler('decrease', menuitem);
     }
-  }, [dispatch, menuitemsCont, props, selectedCategory]);
+  };
 
   return (
     <div className="menuitem__cont">

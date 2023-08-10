@@ -6,6 +6,7 @@ import {
   GET_ADDRESS_REQ_START,
   GET_ADDRESS_REQ_SUCCESS,
   SET_DEFAULT_ADDRESS,
+  SET_DELIVERY_ADDRESS
 } from "../action/types";
 
 const initialState = {
@@ -18,11 +19,13 @@ const initialState = {
       city: "",
       pincode: "",
       addresstype: "",
+      isDefault: false
     },
   ],
   defaultAddress: {},
   isLoading: false,
   isError: false,
+  deliveryAddress: {}
 };
 
 const addressReducer = (state = initialState, action) => {
@@ -69,6 +72,11 @@ const addressReducer = (state = initialState, action) => {
         ...state,
         defaultAddress: action.payload,
       };
+    case SET_DELIVERY_ADDRESS: 
+    return {
+      ...state,
+      deliveryAddress: action.payload
+    }
     default:
       return state;
   }
