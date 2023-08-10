@@ -11,7 +11,7 @@ import Card3 from "../../components/card-3";
 
 const OrderNew = () => {
   const reduxDispatch = useDispatch();
-  const { cartitems, carttotal } = useSelector((state) => state.cart);
+  const { cartitems } = useSelector((state) => state.cart);
   const { addressList } = useSelector((state) => state.address);
   const [deliveryAddress, setDeliveyAddress] = useState({});
   const [orderItemComplet, setOrderItemComplet] = useState(false);
@@ -92,7 +92,7 @@ const OrderNew = () => {
           </div>
         </div>
         <div className="right-section w-1/4 pl-2">
-          <Card2 carttotal={carttotal}></Card2>
+          <Card2 cartitems={cartitems}></Card2>
         </div>
       </div>
     </div>

@@ -56,9 +56,14 @@ const FetchMenu = (props, category) => async (dispatch) => {
       type: FETCH_MENU_REQ_START,
     });
     const menuItems = await ApiService.getMenuByCategory(category);
+
+    const menuWithQuantity = menuItems?.resData?.map((item) => ({
+      ...item,
+      quantity: 0,
+    }));
     dispatch({
       type: FETCH_MENU_REQ_SUCCESS,
-      payload: menuItems.resData,
+      payload: menuWithQuantity,
       category: category
     });
   } catch (error) {

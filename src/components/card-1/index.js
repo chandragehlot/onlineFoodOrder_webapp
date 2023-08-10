@@ -4,10 +4,30 @@ import { getImageUrl } from "../../config";
 import { BiFoodTag } from "react-icons/bi";
 import classNames from "classnames";
 
-
+// props :
+// {
+//   "orderItem": {
+//       "id": 1,
+//       "name": "masala dosa",
+//       "foodtype": "veg",
+//       "mainCategory": "south",
+//       "price": 200,
+//       "courseType": "starter",
+//       "rating": 4,
+//       "description": "This is the description placeholder",
+//       "itemImage": 1,
+//       "IMAGE_MAPPING": {
+//           "id": 1,
+//           "imagekey": "south",
+//           "imageurl": "south_wwebkYnGEzQ.jpg?updatedAt=1639146161359",
+//           "CDN_fileId": null
+//       },
+//       "quantity": 4
+//   }
+// }
 
 const Card1 = (props) => {
-  const { orderItem : { name, description, item_total_price, IMAGE_MAPPING, foodtype, quantity, mainCategory,courseType }} = props;
+  const { orderItem : { name, description, IMAGE_MAPPING, foodtype, quantity, mainCategory,courseType, price }} = props;
   return (
     <div className="card-1-container bg-white">
       <div className="border-b border-gray-300 p-6">
@@ -38,8 +58,8 @@ const Card1 = (props) => {
                 {" "}
                 {/* ₹2,646 */}
               </div>
-              <div className="text-lg font-bold mr-4 text-black"> ₹{item_total_price}</div>
-              <div className="text-base text-green-700">19% off</div>
+              <div className="text-lg font-bold mr-4 text-black"> ₹{price * quantity}</div>
+              {/* <div className="text-base text-green-700">19% off</div> */}
             </div>
           </div>
         </div>
