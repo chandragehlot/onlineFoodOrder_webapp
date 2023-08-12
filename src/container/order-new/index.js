@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Accordian from "../../components/accordion";
 import Card2 from "../../components/card-2";
 import Card1 from "../../components/card-1";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,15 +7,18 @@ import {
   setDeliveryAddressAction,
 } from "../../action/adress.action";
 import Card3 from "../../components/card-3";
+import OrderCard from "../../components/order-card";
+
 
 const OrderNew = () => {
   const reduxDispatch = useDispatch();
   const { cartitems } = useSelector((state) => state.cart);
   const { addressList } = useSelector((state) => state.address);
   const [deliveryAddress, setDeliveyAddress] = useState({});
-  const [orderItemComplet, setOrderItemComplet] = useState(false);
-  const [addressComplete, setAddressComplete] = useState(false);
-  const [paymentComplete, setPaymentComplete] = useState(false);
+
+  const [orderItemState, setOrderItemState] = useState('active');
+  const [addressState, setAddressState] = useState('initial');
+  const [paymentState, setPaymentState] = useState('initial');
 
   useEffect(() => {
     reduxDispatch(getAddressListAction());
@@ -25,11 +27,13 @@ const OrderNew = () => {
   const handleDeliverHere = (address) => {
     reduxDispatch(setDeliveryAddressAction(address));
     setDeliveyAddress(address);
-    setAddressComplete(true);
+    setAddressState('completed');
+    setPaymentState('active')
   };
 
   const handleConfirmOrder = () => {
-    setOrderItemComplet(true);
+    setOrderItemState('completed');
+    setAddressState('active');
   }
 
   return (
@@ -37,12 +41,10 @@ const OrderNew = () => {
       <div className="w-10/12 flex flex-row mt-5">
         <div className="left-section w-3/4 pr-2">
           <div className="pb-2">
-            <Accordian
+            <OrderCard
               heading="Order Summary"
               number={1}
-              defaultExpend={true}
-              showChevron={false}
-              isCompleted = {orderItemComplet}
+              cardState={orderItemState}
               onCompleteContent= {
                 <div className="text-left">
                  {cartitems.length} Items
@@ -55,15 +57,13 @@ const OrderNew = () => {
               <div className="flex justify-start p-5">
                 <button className="button-D max-w-xs" onClick={handleConfirmOrder}> Confirm Order</button>
               </div>
-            </Accordian>
+            </OrderCard>
           </div>
           <div className="pb-4">
-            <Accordian
+            <OrderCard
               heading="Address Details"
               number={2}
-              showChevron={false}
-              isDisabled={false}
-              defaultExpend={true}
+              cardState={addressState}
               onCompleteContent={
                 <>
                 {deliveryAddress?.fullName}{" "}
@@ -71,7 +71,6 @@ const OrderNew = () => {
                 {deliveryAddress?.city} Pin - {deliveryAddress?.pincode}
                 </>
               }
-              isCompleted={addressComplete}
             >
               <Card3
                 addressList={addressList}
@@ -79,16 +78,14 @@ const OrderNew = () => {
                 showPartial={true}
                 handleDeliverHere={handleDeliverHere}
               ></Card3>
-            </Accordian>
+            </OrderCard>
           </div>
           <div className="pb-4">
-            <Accordian
+            <OrderCard
               number={3}
               heading="Payment Information"
-              showChevron={false}
-              isDisabled={false}
-              defaultExpend={true}
-            ></Accordian>
+              cardState={paymentState}
+            ></OrderCard>
           </div>
         </div>
         <div className="right-section w-1/4 pl-2">
